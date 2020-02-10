@@ -1,0 +1,125 @@
+---
+title: Top 10 - Productivity Tricks I Learned From Grad School
+tags: meta prose
+---
+
+<h3>Things that made me faster in grad school</h3>
+
+<p>Now that I'm out in the real world and out of the scholastic bubble, the world seems very obsessed with productivity. It seemed that way before I left the bubble but that's irrelevant. Every student needs to hear one bitter truth about their work ethic. It's not good enough. Without getting too philosophical here I'd like to say that I imagine the concept of heaven and hell these days as juvenile concepts, since from a temporal perspective neither location whether physical or metaphysical is constant. They are dynamic and driven by intrinsic and extrinsic factors, a source of conflict for which there is no rational explanation nor enough philosophical or logical basis to adequately describe. That being said I imagine the worst day possible is the day that you meet your self, untampered and untouched by your own bias or ignorance, before it was subject to the realities of the nature of self, and also the realities of the social system that for better or for worse adult and children, good and bad, has found stable enough and hospitable enough to get the human race to this point.</p>
+
+<p>So to improve productivity, we're given tools or we seek them on our own in a way to grow and improve. I don't spend much time documenting growth or demonstrating it, and my lack of communication abilities is perhaps one of the great weaknesses of modern STEM education. The focus of much of STEM education is technical and mechanical in nature, and may seem boring or tedious to those that acquire influence, money, blahblahblah through other paths in our economy. Perhaps this is the nature of the stereotype of the office drone that we are cultured to hold in disdain. The image of a white collar worker, a fat beaurocrat or desk jockey that works for months on projects that may have no technical or societal value. And yea, we need more people in between who are capable of taking their stories, profound or mundane in their own rights, and communicate that value to the world in a way where there is less focus on personal appearance, race, or other externalizations of the virtual self.</p>
+
+<p>Without any more digressions I'd just like to say that the tools available are often low cost, community supported, and passively marketed. Microsoft is an excelent example of a company that was designed to be a compromise between the cost in terms of development and a least common denominator as far as business tools and common tasks may be concerned. Anyone that's ever started a company may tell you that the cost of tracking accounts, recording client information, complaints, project management, IT, and other basic operations tasks is non-trivial and scales with company size. Sometimes linearly. Sometimes not. But those 'costs' (in the most vague sense possible) cannot adequately be described by a single dollar amount. The costs are actually reflected in the number or personnel required, the sophistication of software conveniences for the shareholders, the computational infrastructure required to meet a bare minimum or to sufficiently enable productivity in other ways. Indeed these concepts are abstract and technical personnel are rarely equipped in undergraduate programs to start small businesses on their own.</p>
+
+<p>I'd like to use a simple example to illustrate an issue with amortization and projection, as well as what I'd refer to as 'enabling'. Recently, I was investigating some new metrics I'm using to make some incremental progress on microbial genomics. I had a metric that first proved reasonable in reconstruction of phylogenetic hierarchies. In this case it was a single number, a correlation coefficient. Each strain I examined of the same species of <em>C. acetobutylicum</em> were sufficiently similar to each other and sufficiently dissimilar from <em>E. coli</em> K12 MG1655 to describe the metric as useful. The correlation coefficients were calculated from a list of 16.7M numbers representing an abstract genomic representation. Indeed high correlations within the species were promising but not sufficient to promote my software. There are many components of the software that need to be addressed to call it 'useful.' One of the more basic questions was related to subsampling and oversampling the genomic characteristics to see how well the list represents the genomic information under different scenarios and sequencing budgets.</p>
+
+<p>To address this question, I needed to rerun each sampling with between 10-30 replicates to fairly characterize the distribution of the correlations and to collect data on how the metric performas under the different scenarios. Without spending 40+ hours required to rewrite the library in Python, or the refactoring (20+) necessary to rewrite my algorithm for parallelization (CPU or otherwise), I decided instead to just use the algorithm as it stands and run the calculations. The most expensive operation in my implementation seems to be disk IO and fastq parsing, rather than string operations that generate that list and I'm not sure exactly how those calculation times scale with the input, nor does my non-existent audience have enough interest at this point, pre-alpha, to care about the scalability. That said, I'll briefly say that state-of-the-art algorithms for read mapping (an unrelated problem with much higher complexity) can process dozens to hundreds of millions of reads in between 2-8 hours on a 8-16 core workstation. The algorithm I wrote was processing 65k reads in maybe 10 hours on a single core but required much less time to write. However, to even investigate larger inputs, I needed to run the algorithm on commercial hardware in the Amazon cloud at a cost of $1.56/hour (c4.8xlarge). You can see quite easily that even with a very optimistic timeframe of 72 hours to run the sweep on larger inputs, the bill can be substantial if the experiments are that repetitive and require 20+ replicates to adequately describe the variance in the metric under study. I could have run the same experiment/sweep in single on my i5 desktop, but it would have taken several days to make progress, without characterizing the variance of the metric of interest, and I couldn't play my video games either. :)</p>
+
+<p>Alternatively, I could overhaul my whole computer to a Ryzen Threadripper CPU which would give me substantially more local compute power, but it would come at a crazy cost for a cutting-edge CPU. But the more important cost, from my perspective, is the time required to learn CUDA or C, which could provide me with substantially faster code, but lead me in a path that differs from my main objective which remains the investigation of available biological data. It looks like the occassional Amazon bill can give me the computational power that I need without sacrificing the time I need to make my algorithm on par with cutting-edge compiled read aligners. Also, I doubt the users will need that degree of speed to get something done with my tool.</p>
+
+<p>Now that I've explained a software and hardware issue that explains why quantitative reasoning is useful to both producers and consumers of such software, I'll come back to my main topic which is 'what is productivity' and 'what did I learn in grad school that made me more effective than before at writing text and composing documents'.</p>
+
+<p>In the bioinformatic field, nearly everything is about reproducibility, plots, models, and calculations. Many of us are fascinated by the decline of Microsoft's monopolistic hold on personal computing resulting largely from the developments of alternative software platforms and pressure from the community for Microsoft to adopt parseable and simple formats for its documents. In the scientific and computational world, the gravity surrounds the Linux operating system and the open source communities. Software is very accessible and there is nearly something out there that does anything and probably does it well. But, a first rule of software is 'know your audience'. If you spend the time to style and customize the user interface of very simple tools or methods, it comes with a large cost. Web applications are sometimes more simple than thick applications especially when the audience could be large, cross-platform compatibility is required, and the interface can be sufficiently simple or intuitive. I don't have formal training nor intermediate experience in web design or thick application development and it's beyond scope for what I can produce right now.</p>
+
+<p>In my world, the rule of thumb is command-line applications on Linux or Mac operating systems. Most of the calculations I can write are technical, sometimes fun to formulate, but not sufficiently groundbreaking that they require a dedicated server or a sophisticated web client. I do most of my work in an ancient text editor called Emacs. Emacs offers macros, highlighting, mail, RSS feeds, and even support for grammar and spelling checks, which probably seems incredibly arcane to most. But how often do you <em>really</em> use the spell checker? Anyways, the best part of working with a text editor like Emacs is that you get used to working with alternative text formats like Markdown, HTML, and LaTeX. I use the former two for most of my blog and documentation, and I use a combination of Markdown and LaTeX when I'm writing sophisticated reports that need additional typesetting capabilites. I don't miss MS Word.</p>
+
+<p>I bring up <code>emacs</code> not because I think the first guy that taught me about it was really hip or in the know, but because I assume that it's easier to maintain. The software is given away gratis under the conditions of use of the GPL licencse. What I like is that I can migrate my configurations and customizations to the editor about the types of documents I tend to write between operating systems, cloud servers, etc. very easily. I have an environment that suits me and I never have to re-purchase or subscribe to the software like we often do with MS Word. It's worth noting that all of us should support the development of open source software financially, with the note that the software is written by people that really understand software and the compromises that should be made between performance, maintainability, conventions, and customizations.</p>
+
+<p>So yeah, the first tip I'd say is that I save time and money by using free software. If I encounter a problem where I need commercial software, I'd buy it. But I hope that I will financially commit to open source software in the future.</p>
+
+
+<h4>1. Emacs and Rstudio</h4>
+
+<p>Many people in my field work a lot in plaintext documents. They're cross platform, simple in size, searchable en-masse at the command line, and often have newer experimental formats that don't need a dedicated editor to modify effectively. Everybody understands Ctrl+F, find replace, copy paste, and modifying structure of documents in a way that might not be done on a single line, but you need to delete a few characters here, add some text, rearrange the spacing, and then repeat that process the next time a pattern appears in the structure of a file. Sometimes this can be done with awk or sed, but it's also really simple to use Emacs macros to just rearrange what you're interested in.</p>
+
+<p>As I mentioned above I use emacs to work on plaintext and source code editing. In a seemingly unrelated note, I often need to prepare graphs, explain methodology, or generate reports that contain some reference to the code used and literate programming is often a big deal. Rstudio is an excellent IDE for statistical and scientific documentation where you can show command-line operations, parallelization routines, parameter sweeps, model evaluations, distributions, hypothesis tests and more.</p>
+
+<h4>2. Terminal multiplexing</h4>
+
+<p>This might not make much sense to those of you who don't spend time at the terminal or assume that it's not for everyone. One of the best customizations to my desktop was a cron job that rotates wallpapers and does basic image manipulations at the command line in an automatable fashion. You'd be surprised what you can accomplish in terms of calculation or automation at the command line and if you're not automating tasks you do often, you're either too lazy to learn how or you assume that someone hasn't written something you need to do at the command line. So I connect to my AWS server or open an editor in a terminal environment that I want to persist if I turn off my laptop or disconnect from the server and I want the environment to be right where I left it so I can resume work easily. And sometimes you're multitasking, multiple calculations, tests, installing or debugging software and/or dependencies, and it's nice to have what is referred to as a 'multiplexer' that can create multiple 'sessions' or 'projects' that each have different windows that you can switch between easily. It's kind of like the multiple desktop concept on OSX and conceptually similar to alt-tab, but it's organized a bit different in a spatial sense, and a lot more sessions can be managed with current memory limitations. For this I use a multiplexer called <code>tmux</code>.</p>
+
+<h4>3. Terminal transparency and drop-down 'Guake' feature</h4>
+
+<p>I am in love with terminal transparency. If you've ever needed to follow instructions from the web or needed to copy text verbatim, a drop-down and transparent terminal can be very convenient because a) it means you don't have to cycle through windows to get to the one you need, and b) it means you can keep working on something even if you're monitoring something or reading from something else in the background. I'm sure that greater minds have figured out how to be just as productive with alt-tab but it saves me some mouse clicks or refocusing my attention on one window and forgetting what was referred or said on the other window. That's ultimately a frequency and mental memory issue more than anything but I find transparency a really nice effect for my productivity. And the dedicated hotkey of a Quake-style drop-down terminal is refreshing too.</p>
+
+<h4>4. Jedi-mode for Python development</h4>
+
+<p>I won't spend much time on this one, I'll just say that it's a nice code autocompletion feature for Python development that lets you explore available methods or class hierarchies in a namespace, which saves some time from flipping to the documentation page and looking up whether the method was camel-case or underscored, and it can show documentation in a buffer if you need it. Ultimately, it just saves you from flipping between browser tabs or scrolling through documentation pages for the 3 different modules you're using in your script or application.</p>
+
+
+<h4>5. ORG-mode for notes and project planning</h4>
+
+<p>There are hundreds of note-taking software available for professionals. I haven't tried every single one and this is probably an area I know the least about. Every student finds their own system for note taking and every professional a system for project planning or laying out a plan and tasks for short term deliverables. What worked for me was a system called <a href="#" title="Sublists, hyperlinks, tables, collapsing, timers, and more" data-toggle="popover" data-placement="auto" data-trigger="hover" data-html=true data-content='<img src="{{ base }}/assets/img/emacs-org-mode.gif" height="100%" width="100%" />'>org-mode</a>, which is in its most simple form, is a simple plain-text file that is basically a list of items, each with sublists, and the editor has keyboard shortcuts that let you rearrange your bullets in the hierarchy. It lets me get abstract ideas out in the open, expand upon questions, and then collapse or expand the sublists when I need to read or rearrange futher.</p>
+
+
+<h4>6. Operating system choice and experience debugging dependencies</h4>
+
+<p>This can arguably be categorized as a productivity enhancement. C/C++ code runs on every platform. Java runs on every platform. Some scientific programs and algorithms aren't found in package managers systems and have dependencies that must be installed and visible to the algorithm. My first step in this direction was an OSX laptop and homebrew. My next step was a familiarity with Linux distributions and a slow evaluation of Lubuntu, Mint, Debian flavors and work and graduate experience with RedHat family distributions. I finally settled on the AUR and enjoyed the modern package management system involved with it. AUR didn't solve all my problems, nor did Github, nor did familiarity with modern language package management systems. But these tools are effective and often result in fewer delays installing software or compiling system packages on my home system. The variety of tools available for operating system package management leads me to believe that interpreted language package management is often simpler for most users with or without root permissions to install the types of software that I develop. It's a minor configuration to load your packages into the AUR or apt repositories or similar if your algorithm has enough weight or audience to do so.</p>
+
+<h4>7. Just kidding</h4>
+
+<p>Everything so far has still been abstract and simple tools that I use to create an environment of productivity. The tools I use for actual productivity in literate programming require that environment, but the stuff that actually matters is as follows.</p>
+
+
+    
+<ul>
+    <li><code>find</code> GPL3+</li>
+    <li><code>grep -R</code> GPL3+</li>
+    <li><code>sed</code> GPL3+</li>
+    <li><code>parallel</code> GPL3+</li>
+    <li><code>time</code> GPL3+</li>
+    <li><code>crontab</code> GPL3+</li>
+    <li><code>nvm, pyenv, rvm</code> MIT, MIT, Apache</li>
+    <li><code>make</code> GPL3+</li>
+    <li><code>rsync</code> GPL</li>
+</ul>
+
+<h4>Summarizing tools for productivity on Linux</h4>
+
+<p>Mastery of all of these tools is not sufficient to be productive but I think they are great tools that represent larger computational concepts that can either be whole companies and paid software in their own right, with advanced features, support, improved UI... or... if the public was willing to learn these rather simple tools it could enhance productivity of most people doing quantitative or analytical work.</p>
+
+<ol>
+    <li>
+	<h5><code>find</code></h5>
+	<p>find is basic software provided on the linux system which can locate files matching a pattern. For example, <code>find /home/matt/Documents -name '*timesheet.xls'</code> will find any time spreadsheets. It's a very fast version of filesystem search and can even execute commands to search those documents for text, print line numbers, or modify the files in place. On OSX for example, it would be challenging to make edits to each timesheet even if the edits required are uniform. Imagine you have a number of mp3s that you want to convert to a different codec but you want to restrict those edits to songs from TDH only. It's a powerful tool, your operating system and filesystem is a great database already, and you don't need specialized software or manual steps to curate records, collate, or convert files.</p>
+    </li>
+    <li>
+	<h5><code>grep -R</code></h5>
+	<p>grep is a tool that uses a concept called 'regular expressions' to find line numbers or files that contain text matching a pattern. It's a more direct but less extensible application than <code>find . -name '*timesheet.tsv' -exec grep -n {} \;</code> and restricting your filesystem searches to certain directories is more performant and logical than complete operating system search with Windows or OSX file search features. This might not make much sense to some.</p>
+
+    </li>
+    <li>
+	<h5><code>sed</code></h5>
+	<p>sed is a tool that lets you edit files, in place or in streams. Why not use a text editor, Matt? Sometimes if you know how simple the edit is or if loading the entire file into memory would slow your system, then sed makes you faster and more memory efficient. Sometimes we have to reformat a file, remove quotes from a spreadsheet, or simple things that should have simple toools and don't require applications or menus to modify. The learning curve for grep and sed is maybe 2 hours if you're an undergrad but once you learn it and with an internet browser or regular expression testing website, you can do powerful edits on large files without hogging memory.</p>
+    </li>
+    <li>
+	<h5><code>parallel</code></h5>
+	<p>You know why our social system is hierarchical in the first place? Delegation, finance, and strategy. Have you ever wished you had 4 hands? Or that you had an intern that could do mundane work for you so that you could spend more time doing skilled tasks which they wouldn't have the same experience to do? GNU parallel is an underrated operating system level parallelization suite to run many conversions, calculations, pipelines, etc simultaneously. It's pure multitasking and pure productivity.
+    </li>
+
+    <li>
+	<h5><code>time</code></h5>
+	<p>Sometimes you just want to know how long it took something to run. A calculation, a format conversion. It helps you plan and optimize your strategy for getting things done.</p>
+    </li>
+    <li>
+	<h5><code>crontab</code></h5>
+	<p>Sometimes you'll need to update a database or a file or run a conversion, or run a backup every day. This is a fairly concept that has many applications and helps you build systems and automation into your analytical work.
+    </li>
+
+    <li>
+	<h5><code>nvm, pyenv, rvm</code></h5>
+
+	<p>Sometimes you just want a reliable install experience. Sometimes you don't have administrative permissions. Sometimes you have multiple projects with different software requirements that could interfer and compartmentalization is cheap enough on your hard drive. </p>
+    </li>
+
+    <li>
+	<h5><code>make</code></h5>
+	<p>This is more dogmatic and software related than other tools and might not be applicable to all. But installing source code is cometimes simple enough as a configure script and a Makefile. It's not productivity, but it's a nice and simple strategy to compartmentalize tasks, declare a sequence of steps and dependencies... it's not for everyone. But it sure is nice if any compilation or testing strategy for a package manager has a unified entry point.</p>
+    </li>
+
+    <li>
+	<h5><code>rsync</code></h5>
+
+	<p>Wouldn't it be great if I could move this from here to there on my computer? Or upload these files somewhere else?</p>
+    </li>
+</ol>

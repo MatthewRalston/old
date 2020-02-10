@@ -1,13 +1,20 @@
 # Site Settings
-title: Bulma Clean Theme
-tagline: Bulma Clean Theme
-email: your-email@domain.com
+title: Simulated Biology
+tagline: You think Kunkka knew I stole his rum?
+author:
+  name: "Matthew Ralston"
+  email: mralston.development@gmail.com
+  url: "http://matthewralston.us"
+  twitter: "TheWaterAndWind"
+
+
 description: >
-  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
-baseurl: "/bulma-clean-theme"
-url: "https://www.csrhymes.com"
+  Periodic Letters, Blog Content, Contract Research
+baseurl: "/"
+markdown: kramdown
+url: "http://localhost:4000"
 permalink: pretty
-#favicon: /path/to/favicon.png
+#favicon: favicon.ico
 
 paginate: 5
 paginate_path: "/blog/page:num"
@@ -23,6 +30,7 @@ disqus:
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-toc
   - jekyll-feed
   - jekyll-seo-tag
   - kramdown
@@ -44,7 +52,7 @@ sass:
   style: compressed
   source_dir: _sass
 
-#google_analytics: UA-code-here
+#google_analytics: UA-158080285-1
 
 defaults:
   -
@@ -58,15 +66,25 @@ defaults:
       path: ""
       type: "posts"
     values:
-      author: "C.S. Rhymes"
+      author: "Matt Ralston"
       layout: post
-      image: https://via.placeholder.com/1200x800
+      image: /assets/img/dna-3888228__480.jpg
       show_sidebar: true
 
-markdown: kramdown
-highlighter: rouge
+
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+#highlighter: rouge
 
 footer_menu: example_footer_menu
+
+version: "0.0.1"
+# toc:
+#   min_level: 2 # Default 1
+#   max_level: 4 # Default 6
+
 
 collections:
   products: 
@@ -74,3 +92,4 @@ collections:
     layout: product
     image: https://via.placeholder.com/800x600
     show_sidebar: false
+    

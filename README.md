@@ -1,5 +1,52 @@
 # bulma-clean-theme
 
+
+## Ralston Notes
+
+These are personal notes about the bulma-clean-theme and how I would intend to use it
+
+
+### Menu lists and nesting
+
+The components for this are listed in _data, but their urls are appended elsewhere
+
+Check `navigation.yml` for the top menu, `example_menu` for lefthand menubar, `blog_menu` for blog-specific menubar.
+
+### Pages that mess with site.baseurl and site.url
+
+* _includes:
+  - head.html
+  - header.html
+  - hero.html (top is hero image)
+{{ site.url }}/{{ site.baseurl }}/something/here
+
+
+### Page types
+
+* landing            - Good documentation page
+* page-1             - Generic page with blog entries
+* page-2             - Generic page - 404 etc.
+* page-3             - Generic page with menubar (AND top menu)
+* page-4             - Genetic page with tabs/links (accordion would be better here)
+* page-5             - Generic page without footer
+* page-without-hero  - Generic page without banner
+* page-with-contents - Generic page with menubar and ToC
+* showcase           - Portfolio page - large, unobstructed images
+* products           - Merchandise display page (can link out?)
+
+### TODO
+
+#### index.md
+1. customize hero - cell.png
+2. introduction - what the front page is
+3. about me
+  a. make 'skills' accordion part of the index.md page
+  b. cv link button
+4. portfolio section : abbreviated graphs/artwork
+5. Sitemap suggestion
+6. contact me from prologue theme
+
+
 [![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
 ![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
 

@@ -1,0 +1,13 @@
+# TODO list
+
+
+* Home (index.html vs index.md)
+** Hero should be black
+** Adjust the size of the contact form
+
+* Blog
+** Set images into blog/img
+** _config.yml default image as blog/img instead of img/
+
+
+<!--    {% include toc.html html=content class='menu-list' h_min=2 h_max=4 contents_title=contentsTitle %} -->

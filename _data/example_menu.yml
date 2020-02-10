@@ -1,8 +1,8 @@
 - label: Example Menu
   items:
-    - name: Home
+    - name: EXAMPLE MENU
       link: /
-    - name: Pages
+    - name: OTHER PAGES MENU
       link: /#
       items:
         - name: Page With Sidebar 

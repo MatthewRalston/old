@@ -1,0 +1,672 @@
+---
+title: Beginner Array/List Methods
+tags: beginner python ruby haskell javascript r 
+toc: true
+hero_image: /assets/img/Slicing_index_python.png
+---
+
+<!-- Maybe a nice barchart of the simple comparisons? -->
+<!-- Add examples in all languages for how appends respond to array size. Difference between trivial method comparisons (usually without replication either) and parametric comparisons. -->
+<!-- Maybe add a line graph (with CIs) for each method -->
+
+<p>Hello everyone! Today we'll be talking about essential array/list methods in different languages, reminding our readers of differences across languages. As beginner programmers, many of us are not aware of differences in the implementations of fundamental structures between languages. While we occasionally hear generalizations (<a href="http://attractivechaos.github.io/plb/">perl is faster than python for strings</a> etc.), benchmarking is more common among mature libraries/packages than standard library or primitive data structures.</p>
+
+
+<p>An algorithm's cost depends on its data structures and their instance methods. For example, appending items, iterating, or performing normalizations on a list. As a beginner, I was not aware of the differences between <a href="#wikiTable">lists, linked-lists, arrays, and hashmaps</a>. Additionally, list/array methods perform differently in speed between languages and sometimes have multiple approaches (push, append, concat, extend, etc). Our first example in this tutorial will be about appending to a basic list/array. Skip ahead to <a href="#bsearch">Binary Search</a> if you feel comfortable with this concept already.</p>
+
+<h3 id="append">Array/List Append</h3>
+
+
+
+Some of these operations modify the structure in place (mutability) while some return a duplicated structure with the modifications.
+
+<p>Appending to an array is a basic operation that is fundamental to many basic computational operations and applications. It is important to understand that the plurality of arrays (or lists if you prefer) means that array methods are extremely common in our codebases. One such fundamental operation, the append, is essential for processing datasets and working iteratively. In early programming languages, the basic 'last in, first out' (LIFO) <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">stack</a> was typically a collection of integers (or other primitives) simply thrown into a collection for later use. Importantly, the most simple 'list', the stack may or may not have a limited capacity and subject to overflow limits. A principle difference between the '<a href="https://en.wikipedia.org/wiki/Array_data_structure">array</a>' and the <a href="https://en.wikipedia.org/wiki/Linked_list">linked-list</a> is the way the "next" element of the collection may be accessed. For the array, the next element is simply the next address in physical memory. The linked-list however, stores a pointer to the next element along with the current element.</p>
+
+<p>Now let's think about access performance for the array or list. For example, if the memory addresses 2000-2256 referred to some data, then you could append (or prepend) to a stack by assigning a new integer to address 1998 with an array implementation such that the array pointer references 1998. In contrast, what if you needed to access the bottom of the stack, or the first element added to it (to determine array length, for example)? In this case, you'd need to traverse the length of the whole array to find where the array ends. The cost of this operation grows with the size of the array, N. Now imagine how expensive it would be to grow an array if the language's implementation (FIFO behaviour, I suppose) required appending to address 2258, then 2260, etc. Each append would make subsequent appends progressively expensive. This is not usually or always the case, but I include it to recommend users experiment with different data structures and methods to determine the best performance.</p>
+
+
+<table class="wikitable" id="wikiTable">
+<caption><h4>Tabe 1: Comparison of list data structures<sup class="reference"><a href="https://en.wikipedia.org/wiki/Array_data_structure">[wiki]</a></sup></h4></caption>
+<tbody><tr>
+<th></th>
+<th><a href="https://en.wikipedia.org/wiki/Linked_list" title="Linked list">Linked list</a></th>
+<th><a class="mw-selflink selflink">Array</a></th>
+<th><a href="https://en.wikipedia.org/wiki/Dynamic_array" title="Dynamic array">Dynamic array</a></th>
+<th><a href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree" title="Self-balancing binary search tree">Balanced tree</a></th>
+<th>Random access list</th>
+<th><a href="https://en.wikipedia.org/wiki/Hashed_array_tree" title="Hashed array tree">Hashed array tree</a></th>
+</tr>
+<tr>
+<td>Indexing</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ddffdd">Θ(1)</td>
+<td style="background:#ddffdd">Θ(1)</td>
+<td style="background:#ffffdd">Θ(log n)</td>
+<td style="background:#ffffdd">Θ(log n)<sup id="cite_ref-10" class="reference"><a href="https://en.wikipedia.org/wiki/Array_data_structure#cite_note-10">[10]</a></sup></td>
+<td style="background:#ddffdd">Θ(1)</td>
+</tr>
+<tr>
+<td><span class="nowrap">Insert/delete</span> at beginning</td>
+<td style="background:#ddffdd">Θ(1)</td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ffffdd">Θ(log n)</td>
+<td style="background:#ddffdd">Θ(1)</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+</tr>
+<tr>
+<td><span class="nowrap">Insert/delete</span> at end</td>
+<td style="background:#ddffdd">Θ(1) when last <span class="nowrap">element is known</span>;<br>
+Θ(<i>n</i>) when last <span class="nowrap">element is unknown</span></td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A</td>
+<td style="background:#ddffdd">Θ(1) <a href="https://en.wikipedia.org/wiki/Amortized_analysis" title="Amortized analysis">amortized</a></td>
+<td style="background:#ffffdd">Θ(log <i>n</i>)</td>
+<td style="background:#ffffdd">Θ(log <i>n</i>) updating</td>
+<td style="background:#ddffdd">Θ(1) <a href="http://en.wikipedia.org/wiki/Amortized_analysis" title="Amortized analysis">amortized</a></td>
+</tr>
+<tr>
+<td><span class="nowrap">Insert/delete</span> in middle</td>
+<td style="background:#ffffdd">search time + <span class="nowrap">Θ(1)</span><sup id="cite_ref-11" class="reference"><a href="https://en.wikipedia.org/wiki/Array_data_structure#cite_note-11">[11]</a></sup><sup id="cite_ref-12" class="reference"><a href="https://en.wikipedia.org/wiki/Array_data_structure#cite_note-12">[12]</a></sup><sup id="cite_ref-13" class="reference"><a href="https://en.wikipedia.org/wiki/Array_data_structure#cite_note-13">[13]</a></sup></td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ffffdd">Θ(log <i>n</i>)</td>
+<td style="background:#ffffdd">Θ(log <i>n</i>) updating</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+</tr>
+<tr>
+<td><span class="nowrap">Wasted space</span> (average)</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ddffdd">0</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)<sup id="cite_ref-brodnik_14-0" class="reference"><a href="https://en.wikipedia.org/wiki/Array_data_structure#cite_note-brodnik-14">[14]</a></sup></td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ffffdd">Θ(<span class="nowrap">√<span style="border-top:1px solid; padding:0 0.1em;"><i>n</i></span></span>)</td>
+</tr>
+</tbody></table>
+
+<h4>Append/prepend in various languages</h4>
+<div role="navigation">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a id="pythonAppend-tab" class="nav-link active" data-toggle="tab" href="#pythonAppend" role="tab" aria-controls="pythonAppend" aria-selected="true">Python</a>
+    </li>
+    <li class="nav-item">
+      <a id="rubyAppend-tab" class="nav-link" data-toggle="tab" href="#rubyAppend" role="tab" aria-controls="rubyAppend" aria-selected="false">Ruby</a>
+    </li>
+    <li class="nav-item">
+      <a id="javascriptAppend-tab" class="nav-link" data-toggle="tab" href="#javascriptAppend" role="tab" aria-controls="javascriptAppend" aria-selected="false">Javascript</a>
+    </li>
+    <li class="nav-item">
+      <a id="haskellAppend-tab" class="nav-link" data-toggle="tab" href="#haskellAppend" role="tab" aria-controls="haskellAppend" aria-selected="false">Haskell</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="pythonAppend" role="tabpanel" aria-labelledby="pythonAppend-tab">
+      <h5>list, llist, numpy.array, deque</h5>
+
+{% highlight python %}
+>import collections
+>exampleList = [0,1,2]
+>exampleList.append(3) # instance method append
+>exampleList.insert(len(exampleList), 4) # Direct index insert method
+>exampleList += [5] # plus equals; note that singleton array instantiation is required
+>exampleList.extend([6]) # instance method extend, singleton instantiation *again*
+>npArray = numpy.array([0,1,2])
+>npArray.append(3) # very slow
+>exampleLList = llist.sllist([0,1,2])
+>exampleLList.append(1) # suprisingly, less optimal than a basic list...
+>exampleDeque = collections.deque([1])
+>exampleDeque.appendleft(0)
+# P E R F O R M A N C E
+# 2.7.10, GCC 4.2.1, Apple LLVM 8.0 on 2011 OSX
+>import numpy
+>import timeit
+
+>emptyList   = 's=[]'
+>emptyLList  = 'import llist; t=llist.sllist()'
+>emptyNp     = 'import numpy; u=numpy.array([], dtype=int)'
+>emptyDeque  = 'import collections; v=collections.deque([])'
+>listAppend  = timeit.Timer('s.append(1)', emptyList)
+>listInsert  = timeit.Timer('s.insert(len(s), 1)', emptyList)
+>plusEquals  = timeit.Timer('s += [1]', emptyList)
+>listExtend  = timeit.Timer('s.extend([1])', emptyList)
+>llistAppend = timeit.Timer('t.append(1)', emptyLList)
+>npAppend    = timeit.Timer('numpy.append(u, 1)', emptyNp)
+>dequeAppend = timeit.Timer('v.appendleft(1)', emptyDeque)
+
+>print numpy.mean([listAppend.timeit() for x in range(1000)])
+0.19117085886001586
+>print numpy.mean([listInsert.timeit() for x in range(1000)])
+0.32939401173591615
+>print numpy.mean([plusEquals.timeit() for x in range(1000)])
+0.42768072748184205
+>print numpy.mean([listExtend.timeit() for x in range(1000)])
+0.42768072748184205
+>print numpy.mean([llistAppend.timeit() for x in range(1000)])
+0.558116751909256
+>print numpy.mean([npAppend.timeit() for x in range(1000)])
+9.360302472352982 # This is similarly ~2 orders slower than list append
+# according to this stackoverflow thread https://stackoverflow.com/a/7134033/2005704
+>print numpy.mean([dequeAppend.timeit() for x in range(1000)])
+0.12067595839500428
+{% endhighlight %}
+
+
+    </div>
+    <div class="tab-pane fade" id="rubyAppend" role="tabpanel" aria-labelledby="rubyAppend-tab">
+      <h5>Array, Queue</h5>
+{% highlight ruby %}
+>exampleArray = [0,1,2]
+
+>exampleArray.push(3)     # First 'native' type of append
+>exampleArray << 4        # Second 'native' type of append
+>exampleArray[exampleArray.length] = 5 # Direct index assignment
+>exampleArray.concat([6]) # Analogous to Python's List#extend
+>exampleArray.insert(exampleArray.length, 7) # Direct index insert
+>exampleArray.unshift(-1) # Prepend
+>exampleQueue = Queue.new
+  
+# P E R F O R M A N C E
+# 2.1.2p95 on 2011 OSX
+>require 'benchmark'
+>require 'thread'
+
+>iterations = 1000 # number of times to run each method
+
+>Benchmark.bm do |bm|
+>  bm.report do
+>    exampleArray = []
+>    iterations.times { exampleArray.push(0) }
+>  end
+>  bm.report do
+>    exampleArray = []
+>    iterations.times { exampleArray << 0 }
+>  end
+>  bm.report do
+>    exampleArray = []
+>    iterations.times { exampleArray[exampleArray.length] = 0 }
+>  end
+>  bm.report do
+>    exampleArray = []
+>    iterations.times { exampleArray.concat([0]) }
+>  end
+>  bm.report do
+>    exampleArray = []
+>    iterations.times { exampleArray.unshift(0) }
+>  end
+>  bm.report do
+>    exampleArray = []
+>    iterations.times { exampleArray.insert(exampleArray.length, 0) }
+>  end
+>  bm.report do
+>    exampleQueue = Queue.new
+>    iterations.times { exampleQueue << 0 }
+>  end
+>  bm.report do
+>    exampleQueue = Queue.new
+>    iterations.times { exampleQueue.push(0) }
+>  end
+>end
+ user     system      total        real
+ 0.000000   0.000000   0.000000 (  0.000268) #      Array#push    ...
+ 0.000000   0.000000   0.000000 (  0.000194) #      Array#<<      ...
+ 0.000000   0.000000   0.000000 (  0.000290) #      x[x.length] = ...
+ 0.000000   0.000000   0.000000 (  0.000534) #      Array.concat([...])
+ 0.000000   0.000000   0.000000 (  0.000247) #      Array.unshift(...)
+ 0.000000   0.000000   0.000000 (  0.000546) # x.insert(x.length, ...)
+ 0.010000   0.000000   0.010000 (  0.010391) #      Queue#<<      ...
+ 0.010000   0.000000   0.010000 (  0.005754) #      Queue#push    ...
+{% endhighlight %}
+      
+    </div>
+    <div class="tab-pane fade" id="javascriptAppend" role="tabpanel" aria-labelledby="javascriptAppend-tab">
+      <h5>Array</h5>
+{% highlight javascript %}
+>
+
+# P E R F O R M A N C E
+# NodeJS v8.9.4 on 2011 OSX
+const Benchmark = require('benchmark')
+var suite = new Benchmark.Suite
+
+function pushArray(arr){
+  arr.push(0);
+}
+function indexAppend(arr){
+  arr[arr.length] = 0;
+}
+function unshiftArray(arr){
+  arr.unshift(0);
+}
+function concatArray(arr){
+  arr.concat([0]);
+}
+
+# First, test the methods without varying the array size 'parametrically'
+function growArrays(){
+  // Growing arrays
+  exampleArray = [];
+  suite.add("Growing an array with continuous 'Array#push' ", pushArray(exampleArray))
+  exampleArray = [];
+  suite.add("Growing an array with direct index assignment (x[x.length] = ...)", indexAppend(exampleArray))
+  exampleArray = [];
+  suite.add("Growing an array with Array#unshift", unshiftArray(exampleArray))
+  exampleArray = [];
+  suite.add("Growing an array with continuous 'Array#concat' of singletons", concatArray(exampleArray));
+  return suite;
+}
+function constantSuite(){
+  // Fresh arrays
+  suite.add("Array#push on fresh arrays (extra cost of array instantiation)", pushArray([]));
+  suite.add("Direct index assignment/concatenation on fresh arrays (extra cost of array instantiation)", indexAppend([]));
+  suite.add("Array#unshift on fresh arrays (extra cost of array instantiation)", unshiftArray([]));
+  suite.add("Array#concat on fresh arrays (extra cost of array instantiation)", concatArray([]));
+  return suite;
+}
+
+
+function modArray(description, min, max, callback){
+  for (var i = min; i < max; i++) {
+    var e = Array(i).fill(1);
+    suite.add(description + ` with array size ${i}`, ()=>callback(e));
+  }
+}
+
+
+function modArraySize(){
+  modArray("Array#push as a function of array size", 0, 1000, pushArray);
+  modArray("Direct index assignment/concatenation as a function of array size", 0, 1000, indexAppend);
+  modArray("Array#unshift as a function of array size", 0, 1000, unshiftArray);
+  modArray("Array#concat as a function of array size", 0, 1000, concatArray);
+  return suite;
+}
+
+
+suite.on("cycle", function(event){
+  console.log(String(event.target));
+}).on("complete", function(){
+  console.log("Fastest is " + this.filter("fastest").map("name"));
+});
+ga=growArrays().run();
+cs=constantSuite().run();
+ma=modArraySize().run();
+
+// Constant time appends (+ cost of array instantiation, in hz)
+>console.log(cs.map((x) => x.hz));			
+[ 17761430.053821966,   // Array#push
+  15674404.910573114,   // Direct index concatenation
+   6827994.338145904,   // Array#unshift
+   2680587.6144321645 ] // Array#concat
+// Sadly my laptop started throwing heap/memory issues with Benchmarkjs, so we couldn't complete the experiment.
+
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="haskellAppend" role="tabpanel" aria-labelledby="haskellAppend-tab">
+      <h5>list append</h5>
+
+      <p>In fact, we're not even gonna test this one. Haskell has one clear way to append and the data structure 'list' is heavily optimized.</p>
+      
+{% highlight haskell %}
+>liszt = [1,2,3]         -- An optimized FILO array. 
+>example1 = 0 : liszt    -- The ultra-fast recommended way to do prepending. 
+>example2 = liszt ++ [4] -- Technically a new singleton-array instantiation
+
+{% endhighlight %}
+    </div>
+  </div>
+</div>
+
+
+<h3>Map, filter, reduce and higher-order functions</h3>
+<p>I'm going to quote Learn You a Haskell<sup><small><a href="https://books.google.com/books?hl=en&lr=&id=QesxXj_ecD0C&oi=fnd&pg=PR5&dq=learn+you+a+haskell&ots=QRd9lZ-Tst&sig=hqW_LUGF5badu6glpaSh3Eb_xGw">M. Lipovaca</a></small></sup> for the description of the map function: <blockquote class="blockquote">Map takes a function and a list and applies that function to every element in the list, producing a new list. </blockquote></p>
+
+<p> Map, filter, and reduce are simple higher-order functions that are often not taught in tutorials. Novice programmers may make the mistake of using a for loop to increment through a csv to perform mutation/selection of certain lines. Unfortunately, imperative/procedural style tends to teach students that data comes from the state/position of your location in the file, rather than a holistic view of data as resulting from discrete/piecewise transformations on an input set. I'm not going to start talking about monads and why learning abstract algebra is going to transform your code, but I will say that higher-order functions help you think about making code modular, simple, and readable to understand the transforms and aggregations of your data. Higher-order functions behave just like normal functions, but they can use and/or return anonymous functions, allowing more complex operations to be created. Think of how hard filtering a list would be if you had to write your own filtering function for each different criterion. Instead, higher-order functions allow us to simply provide a conditional, or a boolean-returning lambda/callback/anonymous function. As you can see from the examples below, there are few to no alternatives and thus benchmarking is not an issue within a language.</p>
+
+
+<h4>Map in various languages</h4>
+
+<p>
+Map is a simple function or array method that applies a transformation to data in an iterable, array, or list format. Interestingly, some languages or environments have lazy and/or parallel versions of the map function, providing a condiderable speedup over a procedural for-loop. Simple functions are usually declared anonymously or through a lambda convention and are tightly coupled to the transformation. Maps can often be chained with filter steps and additional mapped transformations. For example, you could read lines of a csv into an array, map to the third column, convert the type to float, round to 2 decimal places and assign that to a variable. Then you could map a median normalization across the array, before calculating aggregate stats or generating a histogram. Objectively, the functional method is easier to read and interpret.
+</p>
+
+<div role="navigation">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a id="pythonMap-tab" class="nav-link active" data-toggle="tab" href="#pythonMap" role="tab" aria-controls="pythonMap" aria-selected="true">Python</a>
+    </li>
+    <li class="nav-item">
+      <a id="rubyMap-tab" class="nav-link" data-toggle="tab" href="#rubyMap" role="tab" aria-controls="rubyMap" aria-selected="false">Ruby</a>
+    </li>
+    <li class="nav-item">
+      <a id="javascriptMap-tab" class="nav-link" data-toggle="tab" href="#javascriptMap" role="tab" aria-controls="javascriptMap" aria-selected="false">Javascript</a>
+    </li>
+    <li class="nav-item">
+      <a id="haskellMap-tab" class="nav-link" data-toggle="tab" href="#haskellMap" role="tab" aria-controls="haskellMap" aria-selected="false">Haskell</a>
+    </li>
+    <li class="nav-item">
+      <a id="rMap-tab" class="nav-link" data-toggle="tab" href="#rMap" role="tab" aria-controls="rMap" aria-selected="false">R</a>
+    </li>
+  </ul>
+  
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="pythonMap" role="tabpanel" aria-labelledby="pythonMap-tab">
+
+{% highlight python %}
+>e = [0, 1, 2]
+>map(lambda x: x + 1, e) # Map is disfavored in Python vs the list comprehension. Lambda expressions are limited.
+[1, 2, 3]
+>[x + 1 for x in e]      # Simple expressions or function names can be applied to each element in list comprehensions.
+[1, 2, 3]
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="rubyMap" role="tabpanel" aria-labelledby="rubyMap-tab">
+
+{% highlight ruby %}
+>[0,1,2].map{|x| x+1}
+ => [1, 2, 3]
+{% endhighlight %}
+      
+    </div>
+    <div class="tab-pane fade" id="javascriptMap" role="tabpanel" aria-labelledby="javascriptMap-tab">
+
+{% highlight javascript %}
+>[0,1,2].map((x) => x + 1)
+[ 1, 2, 3 ]
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="haskellMap" role="tabpanel" aria-labelledby="haskellMap-tab">
+      
+{% highlight haskell %}
+>map (+1) [0,1,2]
+[1,2,3]
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="rMap" role="tabpanel" aria-labelled-by="rMap-tab">
+{% highlight R %}
+>e <- c(0, 1, 2)
+>sapply(e, function(x) x + 1)
+[1] 1 2 3
+>Map(function(x) x + 1, e)
+[1] 1 2 3  
+{% endhighlight %}
+    </div>
+  </div>
+</div>
+
+
+
+<h4>Filter in various languages</h4>
+<div role="navigation">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a id="pythonFilter-tab" class="nav-link active" data-toggle="tab" href="#pythonFilter" role="tab" aria-controls="pythonFilter" aria-selected="true">Python</a>
+    </li>
+    <li class="nav-item">
+      <a id="rubyFilter-tab" class="nav-link" data-toggle="tab" href="#rubyFilter" role="tab" aria-controls="rubyFilter" aria-selected="false">Ruby</a>
+    </li>
+    <li class="nav-item">
+      <a id="javascriptFilter-tab" class="nav-link" data-toggle="tab" href="#javascriptFilter" role="tab" aria-controls="javascriptFilter" aria-selected="false">Javascript</a>
+    </li>
+    <li class="nav-item">
+      <a id="haskellFilter-tab" class="nav-link" data-toggle="tab" href="#haskellFilter" role="tab" aria-controls="haskellFilter" aria-selected="false">Haskell</a>
+    </li>
+    <li class="nav-item">
+      <a id="rFilter-tab" class="nav-link" data-toggle="tab" href="#rFilter" role="tab" aria-controls="rFilter" aria-selected="false">R</a>
+    </li>
+  </ul>
+  
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="pythonFilter" role="tabpanel" aria-labelledby="pythonFilter-tab">
+
+{% highlight python %}
+>e = [0, 1, 2, 3, 4, 5]
+>filter(lambda x: x > 2, e) # Filter is also disfavored in Python vs the list comprehension. 
+[3, 4, 5]
+>[x for x in e if x > 2]
+[3, 4, 5]
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="rubyFilter" role="tabpanel" aria-labelledby="rubyFilter-tab">
+{% highlight ruby %}
+>e = [0,1,2,3,4,5]
+>e.filter{|x| x > 2} # Could be aliases to the same function
+ => [3, 4, 5]
+>e.select{|x| x > 2}
+ => [3, 4, 5]
+{% endhighlight %}
+      
+    </div>
+    <div class="tab-pane fade" id="javascriptFilter" role="tabpanel" aria-labelledby="javascriptFilter-tab">
+{% highlight javascript %}
+>[0,1,2,3,4,5].filter((x) => x > 2)
+[ 3, 4, 5 ]
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="haskellFilter" role="tabpanel" aria-labelledby="haskellFilter-tab">
+      
+{% highlight haskell %}
+>filter (>2) [0,1,2,3,4,5]
+[3,4,5]
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="rFilter" role="tabpanel" aria-labelled-by="rFilter-tab">
+{% highlight R %}
+>e <- c(0,1,2,3,4,5)
+>e[e > 2]
+[1] 3 4 5
+>subset(e, e > 2)
+[1] 3 4 5
+>Filter(function(x) x > 2, e)
+[1] 3 4 5  
+{% endhighlight %}
+    </div>
+  </div>
+</div>
+
+
+
+<h4>Reduce in various languages</h4>
+<div role="navigation">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a id="pythonReduce-tab" class="nav-link active" data-toggle="tab" href="#pythonReduce" role="tab" aria-controls="pythonReduce" aria-selected="true">Python</a>
+    </li>
+    <li class="nav-item">
+      <a id="rubyReduce-tab" class="nav-link" data-toggle="tab" href="#rubyReduce" role="tab" aria-controls="rubyReduce" aria-selected="false">Ruby</a>
+    </li>
+    <li class="nav-item">
+      <a id="javascriptReduce-tab" class="nav-link" data-toggle="tab" href="#javascriptReduce" role="tab" aria-controls="javascriptReduce" aria-selected="false">Javascript</a>
+    </li>
+    <li class="nav-item">
+      <a id="haskellReduce-tab" class="nav-link" data-toggle="tab" href="#haskellReduce" role="tab" aria-controls="haskellReduce" aria-selected="false">Haskell</a>
+    </li>
+    <li class="nav-item">
+      <a id="rReduce-tab" class="nav-link" data-toggle="tab" href="#rReduce" role="tab" aria-controls="rReduce" aria-selected="false">R</a>
+    </li>
+  </ul>
+  
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="pythonReduce" role="tabpanel" aria-labelledby="pythonReduce-tab">
+
+{% highlight python %}
+>e = [0, 1, 2]
+>reduce(lambda x, y: x + y, e)
+3
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="rubyReduce" role="tabpanel" aria-labelledby="rubyReduce-tab">
+{% highlight ruby %}
+>e = [0,1,2]
+>e.reduce{|x,y| x + y} 
+ => 3
+{% endhighlight %}
+      
+    </div>
+    <div class="tab-pane fade" id="javascriptReduce" role="tabpanel" aria-labelledby="javascriptReduce-tab">
+{% highlight javascript %}
+>[0,1,2].reduce((x,y) => x + y)
+3
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="haskellReduce" role="tabpanel" aria-labelledby="haskellReduce-tab">
+      
+{% highlight haskell %}
+>foldr (+) [0,1,2] # See the following for more details: https://wiki.haskell.org/Foldr_Foldl_Foldl%27
+3
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="rReduce" role="tabpanel" aria-labelled-by="rReduce-tab">
+{% highlight R %}
+>e <- c(0,1,2)
+>Reduce(function(x,y) x + y, e)
+[1] 3
+{% endhighlight %}
+    </div>
+  </div>
+</div>
+
+
+<h3>Binary Search</h3>
+
+<p>
+Searching for an element in an array is a common task in algorithms and it appears more often than you may think. For example, the common conditional 'if varname in listname:' uses a linear search to find an element in an array. In Python, 'in' is an infix style of '__contains__' and is a linear search. If you're running the 'in' command on an unsorted list for each of 1M records, you can see how non-optimal detection of presence/abscence could heavily impact performance of your script. So what *should* a programmer use?
+</p>
+
+<p>
+There are many different search algorithms that work on <a href="http://www.math.ucla.edu/~wotaoyin/math273a/slides/Lec3a_1d_search_273a_2015_f.pdf">1D</a> or 2D structures. Of course the simplest method in 2018 may be to use a hashmap based data structure for direct access. However, the 1D binary search algorithm is illustrated below. In this diagram, the search is for the element '27'. The algorithm begins by <a href="https://en.wikipedia.org/wiki/Bisection">bisecting</a> the array such that 21 is compared to 27. As the desired element is larger than the element in the middle of the sorted array, the algorithm then bisects the upper half of the array, recursing until it locates the element 27. Also note that a linear search (shown on the bottom) takes a larger number on average than the binary search to locate an item in the array.
+</p>
+
+<a title="By A.gholamzade (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3ABinary_search_tree_example.gif"><img width="256" alt="Binary search tree example" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Binary_search_tree_example.gif"/></a>
+
+<h4>Search in various languages</h4>
+<div role="navigation">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a id="pythonSearch-tab" class="nav-link active" data-toggle="tab" href="#pythonSearch" role="tab" aria-controls="pythonSearch" aria-selected="true">Python</a>
+    </li>
+    <li class="nav-item">
+      <a id="rubySearch-tab" class="nav-link" data-toggle="tab" href="#rubySearch" role="tab" aria-controls="rubySearch" aria-selected="false">Ruby</a>
+    </li>
+    <li class="nav-item">
+      <a id="javascriptSearch-tab" class="nav-link" data-toggle="tab" href="#javascriptSearch" role="tab" aria-controls="javascriptSearch" aria-selected="false">Javascript</a>
+    </li>
+    <li class="nav-item">
+      <a id="haskellSearch-tab" class="nav-link" data-toggle="tab" href="#haskellSearch" role="tab" aria-controls="haskellSearch" aria-selected="false">Haskell</a>
+    </li>
+  </ul>
+  
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="pythonSearch" role="tabpanel" aria-labelledby="pythonSearch-tab">
+
+{% highlight python %}
+>import bisect
+>e = [0, 1, 2]
+>eSet = set(e)
+>frozenESet = frozenset(e)
+>def index(a, x):
+.  i = bisect_left(a, x)
+.  if i != len(a) and a[i] == x:
+.    return i
+.  raise ValueError
+
+# Presence/absence
+>1 in e # in is an infix method for lists that uses '__contains__'
+>1 in eSet
+>1 in frozenSet
+# Numerical index
+>e.index(1)
+>index(e, 1)
+# Retrieval
+>next(filter(lambda x: x == 1, e), None) # Returns 1 or None
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="rubySearch" role="tabpanel" aria-labelledby="rubySearch-tab">
+{% highlight ruby %}
+>require 'set'
+>e = [0,1,2]
+>eSet = Set.new(e)
+# Presence/absence
+>e.include?(1)
+>e.member?(1)
+>eSet.include?(1)
+>eSet.member?(1)
+# Retrieval
+>e.index(1)
+>e.find_index(1)
+>e.any?{|x| x == 1}
+>e.find{|x| x == 1}
+>e.sort.bsearch{|x| x >= 1 } # ONLY if sorted
+{% endhighlight %}
+      
+    </div>
+    <div class="tab-pane fade" id="javascriptSearch" role="tabpanel" aria-labelledby="javascriptSearch-tab">
+{% highlight javascript %}
+>function bSearch(array, item){
+>  let low = 0;
+>  let high = array.length - 1;
+>  while (low <= high) {
+>    mid = (low + high) / 2;
+>    if (array[mid] > value) high = mid - 1;
+>    else if (array[mid] < value) low = mid + 1;
+>    else return mid;	
+>  }
+>  return -1;
+}
+>e[0,1,2]
+>e.includes(1)
+>e.indexOf(1) // 1 or -1 if DNE
+
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="haskellSearch" role="tabpanel" aria-labelledby="haskellSearch-tab">
+      
+{% highlight haskell %}
+>e = [0, 1, 2]
+>import Data.Array (Array, Ix, (!), listArray, bounds)
+ 
+>:{bSearch
+>  :: Integral a
+>  => (a -> Ordering) -> (a, a) -> Maybe a
+>bSearch p (low, high)
+>  | high < low = Nothing
+>  | otherwise =
+>    let mid = (low + high) `div` 2
+>    in case p mid of
+>         LT -> bSearch p (low, mid - 1)
+>         GT -> bSearch p (mid + 1, high)
+>         EQ -> Just mid
+>:} 
+
+>bSearchArray
+>  :: (Ix i, Integral i, Ord e)
+>  => Array i e -> e -> Maybe i
+>bSearchArray a x = bSearch (compare x . (a !)) (bounds a)
+>:{
+>axs =
+  listArray
+    (0, 11)
+    [ "alpha"
+    , "beta"
+    , "delta"
+    , "epsilon"
+    , "eta"
+    , "gamma"
+    , "iota"
+    , "kappa"
+    , "lambda"
+    , "mu"
+    , "theta"
+    , "zeta"
+    ]
+>:}
+>bSearchArray axs "mu"
+(9, "mu")
+{% endhighlight %}
+    </div>
+  </div>
+</div>
+
+
+<p>
+At this point, you have seen options for appending, searching, and mapping transforms on arrays in a few languages. The append example showed how much variation there can be in methodology and performance for fundamental array operations. The search method showed how the 'in' operator can become taxing, and how simple sorting can dramatically improve performance. Arrays are important data structures for all scripts, packages/libraries, and apps. Some simple curiosity can yield performance gains and makes coding a more scholastic practice. I hope you enjoyed my first introductory coding post and I'll see you next time!
+</p>

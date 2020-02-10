@@ -1,11 +1,12 @@
-style: is-light
+style: is-dark
 items:
-  - title: Multiple page layouts
-    subtitle: Including sidebar, menubar, tabs and callouts
+  - title: Academic apps and opines
+    subtitle: Github, report requests, mastheads
     icon: fa-copy
-  - title: Blog included
-    subtitle: Layouts for blog and post pages included
+  - title: Not Very Humerus
+    subtitle: RSS | Open source and academic blog
     icon: fa-mail-bulk
-  - title: Works with GitHub Pages
-    subtitle: Quick and easy to get started
+  - title: Code portfolio on Github
+    subtitle: Source code and documentation
     icon: fab fa-github
+    link: https://github.com/MatthewRalston

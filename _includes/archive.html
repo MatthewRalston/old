@@ -1,0 +1,147 @@
+<h2>Archive</h2>
+
+
+<div id="tags">
+{% capture temptags %}
+  {% for tag in site.tags %}
+    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
+{% for temptag in sortedtemptags %}
+  {% assign tagitems = temptag | split: '#' %}
+  {% capture tagsize %}{{ tagitems[2] }}{% endcapture %}
+  {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
+  <a href="{{ site.baseurl }}/blog/tag/{{ tagname }}" id="{{ tagname }}" cnt="{{ tagsize }}" ><code class="highligher-rouge"><nobr>{{ tagname }}</nobr></code></a>
+
+{% endfor %}
+</div>
+
+<div class="container" id="wordcloud">
+  <svg id="werdcloud">
+  </svg>
+</div>
+
+
+<script type="text/javascript">
+ var svg;
+ var g;
+ var tags = {};
+ var tagnames;
+ var wordSizeScale;
+ var fill;
+ var margin;
+ var svgText;
+ var cloud;
+  
+ window.onload = function(){
+   var tgdiv = d3.select("#tags"),   
+
+    tagnames = tgdiv.text().replace(/[\r\n]/g, '').split(" ").filter((x) => x != "");
+    tags = tagnames.reduce(function(acc, tagname){
+      acc[tagname] = +d3.select("#" + tagname).attr("cnt");
+      return acc;
+    }, {}); // REAL tag inference
+    // Using some fake tags for the time being to test the results
+     // Just raw repo stats for languages
+     tags = {
+	 {% for tag in site.tags %}
+	   "{{ tag[0] }}": {{ tag[1].size | times: 1000 }},
+	 {% endfor %}
+     }
+
+     
+     /* tags1 = {
+      *   "javascript": 323938,
+      *   "java": 222852,
+      *   "python": 164852,
+      *   "css": 164585,
+      *   "php": 138771,
+      *   "ruby": 132848,
+      *   "c++": 86505,
+      *   "c": 73075,
+      *   "shell": 65670,
+      *   "c#": 56062,
+      *   "objective-c": 36568,
+      *   "R": 34268,
+      *   "viml": 22450,
+      *   "go": 22264,
+      *   "perl": 16188,
+      *   "coffeescript": 14302,
+      *   "TeX": 13329,
+      *   "swift": 11138,
+      *   "scala": 10853,
+      *   "elisp": 9978,
+      *   "haskell": 8789,
+      *   "lua": 8123,
+      *   "clojure": 6840,
+      *   "matlab": 6052,
+      *   "arduino": 5307,
+      *   "makefile": 5251,
+      *   "groovy": 5041,
+      *   "puppet": 4576,
+      *   "rust": 4383,
+      *   "powershell": 3253
+
+      * }
+      */
+   tag_entries = d3.entries(tags);
+   // Scales
+   fill = d3.scale.category20();
+
+   wordSizeScale = d3.scale.linear()
+			   .domain([0, d3.max(tag_entries, function(d){
+			     return d.value
+			   })]).range([10, 90])
+
+   
+   tagexample = Object.keys(tags).map(function(tagname){
+     return {text: tagname, size: wordSizeScale(tags[tagname])}
+   })
+
+   console.log("Tags:", tags)
+   console.log("Tag Entries", tag_entries)
+   console.log("Tagexample:", tagexample)
+
+   var layout = d3.layout.cloud()
+			 .size([500, 500])
+			 .words(tagexample)
+			 .padding(5)
+			 .rotate(function() { return ~~(Math.random() * 2) * 90; })
+			 .font("Impact")
+			 .fontSize(function(d) { return d.size; })
+			 .on("end", draw);
+   layout.start();
+
+   function draw(words) {
+     d3.select("#werdcloud")
+       .attr("width", layout.size()[0])
+       .attr("height", layout.size()[1])
+       .append("g")
+       .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+       .selectAll("text")
+       .data(words)
+       .enter().append("text")
+       .style("font-size", function(d) { return d.size + "px"; })
+       .style("font-family", "Impact")
+       .style("fill", function(d, i) { return fill(i); })
+       .attr("text-anchor", "middle")
+       .attr("transform", function(d) {
+         return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+       })
+       .text(function(d) { return d.text; });
+   }
+   
+   d3.layout.cloud().stop();
+
+   svgText = d3.selectAll("text")
+	       .on("click", function(d){
+		 url = "{{  site.baseurl }}/blog/tag/" + d.text;
+		 console.log("Redirecting to ", url);
+		 window.location.href = url;
+	       })
+  }
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/d3.layout.cloud.js"></script>

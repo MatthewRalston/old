@@ -1,5 +1,150 @@
 ---
 ---
 
+
+.section-nav {
+
+}
+
+.btn i {
+    margin-right: 0.2em;
+    vertical-align: top;
+}
+
+li > a:hover .color1 {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    color: #101010;
+    background-color: #03949a;
+    border: 0.15em solid #03949a;
+}
+li > a:hover .color2 {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    color: #101010;
+    background-color: #f2b836;
+    border: 0.15em solid #f2b836;
+}
+li > a:hover .color3 {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    color: #101010;
+    background-color: #f29900;
+    border: 0.15em solid #f29900;
+}
+li > a:hover .color4 {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    color: #101010;
+    background-color: #e96b5a;
+    border: 0.15em solid #e96b5a;
+}
+li > a:hover .color5 {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    color: #101010;
+    background-color: #cb283e;
+    border: 0.15em solid #cb283e;
+}
+.navbar-default,
+.navbar-collapse {
+    border: #101010;
+}
+nav.navbar.navbar-default .color1,
+a .color1,
+* .color1 {
+    color: #03949a;
+}
+nav.navbar.navbar-default .color2,
+a .color2,
+* .color2 {
+    color: #f2b836;
+}
+nav.navbar.navbar-default .color3,
+a .color3,
+* .color3 {
+    color: #f29900;
+}
+nav.navbar.navbar-default .color4,
+a .color4,
+* .color4 {
+    color: #e96b5a;
+}
+nav.navbar.navbar-default .color5,
+a .color5,
+* .color5 {
+    color: #cb283e;
+}
+/* Rainbow Top Bar */
+.top-bar {
+    background: url(../images/top-horiz-bar.png) top center;
+    height: 5px;
+    margin-bottom: 1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.bottom-bar {
+    background: url(../images/top-horiz-bar.png) top center;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    z-index: 10;
+}
+/* Icons */
+
+.social-btns li {
+    display: inline !important;
+}
+
+.social-btns i {
+    border-radius: 100%;
+    border: 0.15em solid;
+    font-size: 1em;
+    height: 40px;
+    width: 40px;
+    padding: 11px;
+}
+
+nav.navbar.navbar-default a:hover.color1,
+nav.navbar.navbar-default a:focus.color1 {
+  color: #d53e4f;
+}
+nav.navbar.navbar-default a:hover.color2,
+nav.navbar.navbar-default a:focus.color2{
+  color: #fc8d59;
+}
+nav.navbar.navbar-default a:hover.color3,
+nav.navbar.navbar-default a:focus.color3 {
+  color: #fee08b;
+}
+nav.navbar.navbar-default a:hover.color4,
+nav.navbar.navbar-default a:focus.color4 {
+  color: #e6f598;
+}
+nav.navbar.navbar-default a:hover.color5,
+nav.navbar.navbar-default a:focus.color5 {
+  color: #99d594;
+}
+nav.navbar.navbar-default a:hover.color6,
+nav.navbar.navbar-default a:focus.color6 {
+  color: #3288bd;
+}
+
+
+//$fa-font-path: "../webfonts";
+
+
 // Import Main CSS file from theme
 @import "main";
