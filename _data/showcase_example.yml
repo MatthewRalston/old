@@ -1,36 +1,39 @@
 intro: |-
-  This is an example showcase page to show you how you can use it to easily showcase your work.
+  ## What is a digital portfolio?
+
+  It isn't simply a statement towards employers. A good digital portfolio illustrates diverse skills and complex systems in a clean, plain view for teammates to quickly understand experiences, tools, and interests.
+
+  A current interest is having one or more successful open source projects under my belt, to have experience in collaborative coding. Secondly, I enjoy theoretical and performance assessments of my calculators in Rmd, to become a better analyst. Also, I have interests in citizen-science or science education projects including the PublicLab spectrophotometer and simple spectroscopy projects.
+
+
 items:
   - title: K-mer.js
     subtitle: kmer.js is a k-mer library for NodeJS
     description: |-
       A k-mer profile library concept for Javascript. Distributed on NPM.
 
-    image: /assets/img/genetic_engineering.gif
-    image_ratio: is-16by9
+    image: /assets/img/dna_wow.gif
+    image_ratio: is-4by3
     link: https://matthewralston.github.io/kmer.js/
-    link_text: View the K-mer.js Website
+    link_text: View the K-mer.js Project on Github
     tags: NodeJS,Github,kmers
     github: MatthewRalston/kmer.js
-  - title: Bulma Clean Theme
-    subtitle: A clean and simple theme built with Bulma
+  - title: K-mer Database
+    subtitle: A clean and simple K-mer library for Python
     description: |-
-      A clean and simple Jekyll theme built with the Bulma framework, available as a Ruby Gem. You may recognise it, it's what powers this website!
+      KDB is a Python library designed for bioinformatics applications. It addresses the ['k-mer' problem](https://en.wikipedia.org/wiki/K-mer) (substrings of length k) in a simple and performant manner. It generates a k-mer spectrum/profile and stores the profile to the `.kdb` format spec, a bgzf file similar to BAM. 
 
-      There is a wide variety of different page layout options available, along with the essential blog and post pages.
     features:
-      - Responsive
-      - Page With Sidebar
-      - Page With Menubar
-      - Page With Tabs
-      - Page Contents
-      - Landing Page With Callouts
-      - Blog and Posts
-      - Showcases
+      - bgzf file + index
+      - K-mer count histogram (4^k)
+      - Multiplexed inputs
+      - bgzf header block
+      - CLI and Python module
+
     features_styles: is-centered is-outlined
-    image: /img/bulma-clean-theme-4by3.jpg
-    image_ratio: is-4by3
-    link: https://github.com/chrisrhymes/bulma-clean-theme
-    link_text: View Theme
-    tags: Jekyll,Bulma,CSS
-    github: chrisrhymes/bulma-clean-theme
+    image: /assets/img/genetic_engineering.gif
+    image_ratio: is-16by9
+    link: https://github.com/MatthewRalston/kdb
+    link_text: View the kdb Project on Github
+    tags: python,github,kmers
+    github: MatthewRalston/kdb
