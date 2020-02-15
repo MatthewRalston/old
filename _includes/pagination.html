@@ -1,11 +1,11 @@
 <nav class="pagination is-centered">
     {% if paginator.previous_page %}
-    <a href="{{ site.url }}/{{ site.baseurl }}{{ paginator.previous_page_path }}" class="pagination-previous is-info">Previous</a>
+    <a href="{{ site.url }}{{ paginator.previous_page_path }}" class="pagination-previous is-info">Previous</a>
     {% else %}
     <p class="pagination-previous" disabled>Previous</p>
     {% endif %}
     {% if paginator.next_page %}
-    <a href="{{ site.url }}/{{ site.baseurl }}{{ paginator.next_page_path }}" class="pagination-next is-info">Next</a>
+    <a href="{{ site.url }}{{ paginator.next_page_path }}" class="pagination-next is-info">Next</a>
     {% else %}
     <p class="pagination-next" disabled >Next</p>
     {% endif %}
@@ -14,9 +14,9 @@
         {% if page == paginator.page %}
         <li><a class="pagination-link is-current">{{ page }}</a></li>
         {% elsif page == 1 %}
-        <li><a href="{{ site.url }}/{{ site.baseurl }}{{ paginator.previous_page_path }}" class="pagination-link">{{ page }}</a></li>
+        <li><a href="{{ site.url }}{{ paginator.previous_page_path }}" class="pagination-link">{{ page }}</a></li>
         {% else %}
-        <li><a href="{{ site.url }}/{{site.baseurl }}{{ site.paginate_path | replace: ':num', page }}" class="pagination-link">{{ page }}</a></li>
+        <li><a href="{{ site.url }}{{ site.paginate_path | replace: ':num', page }}" class="pagination-link">{{ page }}</a></li>
         {% endif %}
         {% endfor %}
     </ul>
