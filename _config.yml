@@ -53,6 +53,7 @@ sass:
   source_dir: _sass
 
 google_analytics: UA-158080285-1
+google_adsense: pub-7662320073401472
 
 defaults:
   -
