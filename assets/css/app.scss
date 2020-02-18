@@ -17,8 +17,8 @@ li > a:hover .color1 {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     color: #101010;
-    background-color: #03949a;
-    border: 0.15em solid #03949a;
+    background-color: #253494;
+    border: 0.15em solid #bdbdbd;
 }
 li > a:hover .color2 {
     -webkit-transition: all 0.3s;
@@ -26,8 +26,8 @@ li > a:hover .color2 {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     color: #101010;
-    background-color: #f2b836;
-    border: 0.15em solid #f2b836;
+    background-color: #2c7fb8;
+    border: 0.15em solid #bdbdbd;
 }
 li > a:hover .color3 {
     -webkit-transition: all 0.3s;
@@ -35,8 +35,8 @@ li > a:hover .color3 {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     color: #101010;
-    background-color: #f29900;
-    border: 0.15em solid #f29900;
+    background-color: #fc8d59;
+    border: 0.15em solid #bdbdbd;
 }
 li > a:hover .color4 {
     -webkit-transition: all 0.3s;
@@ -44,8 +44,8 @@ li > a:hover .color4 {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     color: #101010;
-    background-color: #e96b5a;
-    border: 0.15em solid #e96b5a;
+    background-color: #ffffcc;
+    border: 0.15em solid #bdbdbd;
 }
 li > a:hover .color5 {
     -webkit-transition: all 0.3s;
@@ -53,9 +53,28 @@ li > a:hover .color5 {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     color: #101010;
-    background-color: #cb283e;
-    border: 0.15em solid #cb283e;
+    background-color: #c7e9b4;
+    border: 0.15em solid #bdbdbd;
 }
+li > a:hover .color6 {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    color: #101010;
+    background-color: #31a354;
+    border: 0.15em solid #bdbdbd;
+}
+li > a:hover .color7 {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    color: #101010;
+    background-color: #7fcdbb;
+    border: 0.15em solid #bdbdbd;
+}
+
 .navbar-default,
 .navbar-collapse {
     border: #101010;
@@ -63,27 +82,37 @@ li > a:hover .color5 {
 nav.navbar.navbar-default .color1,
 a .color1,
 * .color1 {
-    color: #03949a;
+    color: #253494;
 }
 nav.navbar.navbar-default .color2,
 a .color2,
 * .color2 {
-    color: #f2b836;
+    color: #2c7fb8;
 }
 nav.navbar.navbar-default .color3,
 a .color3,
 * .color3 {
-    color: #f29900;
+    color: #fc8d59;
 }
 nav.navbar.navbar-default .color4,
 a .color4,
 * .color4 {
-    color: #e96b5a;
+    color: #ffffcc;
 }
 nav.navbar.navbar-default .color5,
 a .color5,
 * .color5 {
-    color: #cb283e;
+    color: #c7e9b4;
+}
+nav.navbar.navbar-default .color6,
+a .color6,
+* .color6 {
+    color: #31a354;
+}
+nav.navbar.navbar-default .color7,
+a .color7,
+* .color7 {
+    color: #7fcdbb;
 }
 /* Rainbow Top Bar */
 .top-bar {
@@ -119,27 +148,31 @@ a .color5,
 
 nav.navbar.navbar-default a:hover.color1,
 nav.navbar.navbar-default a:focus.color1 {
-  color: #d53e4f;
+  color: #253494;
 }
 nav.navbar.navbar-default a:hover.color2,
 nav.navbar.navbar-default a:focus.color2{
-  color: #fc8d59;
+  color: #2c7fb8;
 }
 nav.navbar.navbar-default a:hover.color3,
 nav.navbar.navbar-default a:focus.color3 {
-  color: #fee08b;
+  color: #fc8d59;
 }
 nav.navbar.navbar-default a:hover.color4,
 nav.navbar.navbar-default a:focus.color4 {
-  color: #e6f598;
+  color: #ffffcc;
 }
 nav.navbar.navbar-default a:hover.color5,
 nav.navbar.navbar-default a:focus.color5 {
-  color: #99d594;
+  color: #c7e9b4;
 }
 nav.navbar.navbar-default a:hover.color6,
 nav.navbar.navbar-default a:focus.color6 {
-  color: #3288bd;
+  color: #31a354;
+}
+nav.navbar.navbar-default a:hover.color7,
+nav.navbar.navbar-default a:focus.color7 {
+  color: #7fcdbb;
 }
 
 
