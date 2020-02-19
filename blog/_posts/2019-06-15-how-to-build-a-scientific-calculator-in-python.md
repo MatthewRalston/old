@@ -2,6 +2,7 @@
 title: How to build a scientific calculator in Python - Part 1.
 tags: prose beginner education python
 toc: true
+permalink: /blog/how-to-build-a-scientific-calculator-in-Python-part-1
 ---
 
 About a 45 min read.

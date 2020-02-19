@@ -5,21 +5,11 @@
     - name: Pages
       link: /#
       items:
-        - name: Page With Sidebar 
-          link: /page-1/
-        - name: Page Without Sidebar
-          link: /page-2/
-        - name: Page With Menubar
-          link: /page-3/
-        - name: Page With Tabs
-          link: /page-4/
-        - name: Page Without Footer
-          link: /page-5/
-        - name: Page Without Hero
-          link: /page-without-hero/
-        - name: Page With Contents
-          link: /page-with-contents/
-        - name: Landing Page With Callouts
-          link: /landing/
+        - name: Basic Skills in Computational Research Environments
+          link: /blog/basic-skills-in-computational-research-environments
+        - name: Kmer Database Format (Part 1.)
+          link: /blog/kmer-database-format-part-1
+        - name: How to build a multi-command CLI in Python (Part 1.)
+          link: /blog/how-to-build-a-scientific-calculator-in-Python-part-1
     - name: About N.V.H.
       link: /blog/about

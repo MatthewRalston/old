@@ -4,7 +4,11 @@
     <div class="content">
         <p>{{ showcase.intro | markdownify }}</p>
     </div>
-    <a href="https://www.patreon.com/bePatron?u=9431048" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+    <div class="is centered">
+	<div class="column is-2-desktop is-4-tablet">
+	    <a href="https://www.patreon.com/bePatron?u=9431048" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+	</div>
+    </div>
     {% for item in showcase.items %}
         <section class="showcase">
             <figure class="image {% if item.image_ratio %} {{ item.image_ratio }} {% else %} is-16by9 {% endif %}">
