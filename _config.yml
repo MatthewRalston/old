@@ -4,7 +4,7 @@ tagline: You think Kunkka knew I stole his rum?
 author:
   name: "Matthew Ralston"
   email: mralston.development@gmail.com
-  url: "http://matthewralston.us"
+  url: "https://matthewralston.github.io"
   twitter: "TheWaterAndWind"
 
 
@@ -12,7 +12,7 @@ description: >
   Periodic Letters, Blog Content, Contract Research
 baseurl: ""
 markdown: kramdown
-url: "http://matthewralston.github.io"
+url: "https://matthewralston.github.io"
 permalink: pretty
 favicon: /assets/img/favicon.png
 
@@ -24,7 +24,7 @@ disqus:
   # Leave shortname blank to disable comments site-wide.
   # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
   # shortname: my_disqus_shortname
-  shortname: csrhymes
+  shortname: matthewralston
 
 
 plugins:
