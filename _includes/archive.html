@@ -12,7 +12,7 @@
   {% assign tagitems = temptag | split: '#' %}
   {% capture tagsize %}{{ tagitems[2] }}{% endcapture %}
   {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
-  <a href="{{ site.baseurl }}/blog/tag/{{ tagname }}" id="{{ tagname }}" cnt="{{ tagsize }}" ><code class="highligher-rouge"><nobr>{{ tagname }}</nobr></code></a>
+  <a href="{{ site.url }}/blog/tag/{{ tagname }}" id="{{ tagname }}" cnt="{{ tagsize }}" ><code class="highligher-rouge"><nobr>{{ tagname }}</nobr></code></a>
 
 {% endfor %}
 </div>

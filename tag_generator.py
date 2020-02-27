@@ -13,7 +13,7 @@ No plugins required.
 import glob
 import os
 
-post_dir = '_posts/'
+post_dir = 'blog/_posts/'
 tag_dir = 'blog/tag/'
 
 filenames = glob.glob(post_dir + '*md') + glob.glob(post_dir + '*html')
@@ -40,12 +40,13 @@ total_tags = set(total_tags)
 
 old_tags = glob.glob(tag_dir + '*.md')
 for tag in old_tags:
-    os.remove(tag)
+    if "index.md" not in tag:
+        os.remove(tag)
 
 for tag in total_tags:
     tag_filename = tag_dir + tag + '.md'
     f = open(tag_filename, 'a')
-    write_str = '---\nlayout: tagpage\ntitle: \"Tag: ' + tag + '\"\ntag: ' + tag + '\nrobots: noindex\n---\n'
+    write_str = '---\nlayout: tagpage\ntitle: \"Tag: ' + tag + '\"\ntag: ' + tag + '\nrobots: noindex\nhero_image: /assets/img/hashtag.png\n---\n'
     f.write(write_str)
     f.close()
 print("Tags generated, count", total_tags.__len__())

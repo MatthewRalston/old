@@ -3,7 +3,7 @@ title: Sorting Out Modules in Python
 subtitle: Modules and importing for beginners
 image: /assets/img/python_import_stringio.jpg
 hero_image: /assets/img/xvideos_python_programming.png
-tags: python beginners noob
+tags: python beginner noob
 toc: true
 ---
 
