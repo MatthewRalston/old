@@ -1,0 +1,214 @@
+---
+title: How do I become a bioinformatician?
+subtitle: Courses, programming, and problem solving (20 min read)
+tags: meta prose education beginner
+toc: true
+permalink: /blog/how-do-i-become-a-bioinformatician
+---
+
+
+
+<p>I see plenty of posts on <a href="https://reddit.com/r/bioinformatics">/r/bioinformatics</a> of students or mid-career professionals asking what it takes to become a bioinformatician. What skills should I have? What programming languages should I learn? What course should I take? Do I need a masters or PhD? Here is my answer to the question 'How do I become a bioinformatician?'</p>
+
+
+<blockquote>About a 20 minute read</blockquote>
+
+<figure>
+    <img src="{{ base }}/assets/img/expanding_brain_job_in_bioinformatics.jpg" alt="You can't exactly fake enthusiasm or expertise"/>
+    <figcaption>Formal study provides direct advisement on the theoretical frontiers that drive the field forward. The opportunity cost is many of the concepts can be learned without a lengthy and often terminal graduate education. With strong fundamentals in biology, and a creative process enabled by the latest distributed HPC and cloud architectures, the sky is the limit. </figcaption>
+</figure>
+
+<h2>Introduction</h2>
+
+
+<h3>What are some closely related fields?</h3>
+
+<p>Bioinformatics is an information science field related to the analysis of biological datasets. Think econometrics or cheminformatics just applied to biology. Other closely related disciplines that make appearances in bioinformatics curricula include probability and statistics, machine learning, computer science, molecular biology, genetics and more. </p>
+
+<h3>What are the key technologies driving growth?</h3>
+
+<p>Broadly speaking, any biochemical technology capable of producing non-trivial data likely has analytical software somewhere downstream. I'm thinking of mass spectrometry on one end, x-ray crystallography and its younger cousin cryo EM, flow cytomery (FACS), and much more.</p>
+
+<p>That said, the defining technology driving interest in the bioinformatics field has got to be DNA sequencing. DNA sequencing is experiencing exponential reductions in cost and improvements in sequencing efficiency that is inundating the field with sequencing data, commonly in fastq or fasta format.</p>
+
+<h3>Do I need a degree?</h3>
+
+
+<img src="{{ base }}/assets/img/get_a_degree_they_said.jpg"/>
+
+<p>You likely need at least an undergraduate degree, though it is not necessary for it to be in bioinformatics. An undergraduate degree should give you a solid foundation in the huge molecular biological field that is driving the generation of so much data, the fundamental concepts behind computing and programming, or ideally both.</p>
+
+<p>That said, there is <a href="#course-work">more content below</a> on what courses you can take during university, grad school, or via MOOCs to buff up your background in molecular biology and programming.</p>
+
+<h3>What degree programs are available?</h3>
+
+<p>A few universities are offering undergraduate degree programs in bioengineering, bioinformatics, and quantitative biology. Many flagship state universities offer graduate programs (MS and PhD) in bioinformatics as well. Personally, I attended the University of Delaware for my B.S. in biochemistry and MS in bioinformatics, and had an incredibly enriching experience doing RNA-seq analysis of microbiological stress-response programs.</p>
+
+<h3>What is the salary range?</h3>
+
+<p>From my experience, relevant job titles include research assistant/associate, software developer/engineer, bioinformatician, computational biologist, and research scientist/investigator. Salary ranges for academic or non-profit institutions can range from $30k-50k for research assistants, and much healthier $50k-80k for software engineers, research associates, and other titles. In the for-profit sector, however, salaries can be much greater, upwards of $100k for even junior level (< 10 years) developers. Be sure to check Glassdoor and Payscale for your area to find out what a competitive offer looks like.</p>
+
+<h2 id="course-work">Course work</h2>
+
+<p>This section is a little bit more involved, and many of the courses I'll mention are sophomore or junior level and may require additional pre-requisites to properly understand. I'll try to explain as much as possible why some of the biology classes are particularly relevant for those of you who are coming from the comp-sci side of things.</p>
+
+
+<img src="{{ base }}/assets/img/coursework_is_coming.jpg"/>
+
+<h3>Biology and Chemistry</h3>
+
+<p>Arguably half of the bioinformatics field is related to the understanding of molecular networks within the cell and how mutations may influence expression, small-chemical/ligand binding, tertiary structure, and ultimately the phenotype of the cell or organism under study. In contrast to many engineering or p-chem related courses, which could help if you work in an instrument manufacturing company, most of these courses do not require calculus.</p>
+
+<img src="{{ base }}/assets/img/good_burger_i_know_some_of_these_words.jpg"/>
+
+<h4>Molecular Biology</h4>
+
+<p>Molecular biology is a course that teaches you the fundamentals of how cells grow, divide, and use molecular signals and machinery to orchestrate the proper, non-diseased functioning of a cell and/or organism. Study of molecular biology can lead to interesting gene/protein targets for molecular dynamics studies, mutational analysis via sequencing, and pathway studies. With thousands to hundreds of thousands of genes in the typical cell, the system complexity is enormous and often poorly understood.</p>
+
+<p>The immense amount of information generated from molecular techniques and new genetic tools are leading to key insights throughout basic biology, ecology, pharma, biotech, and agritech. Without a thorough understanding of *why* these molecules may be so important, computer scientists might not enjoy or even appreciate the impact of what their algorithms or analyses may provide to biological researchers.</p>
+
+<p>Moreover, without a good understanding of the biology, computer scientists may make assumptions about the systems being characterized codified in their algorithmic approaches. I strongly advise you to take a molecular biology course as a part of your bioinformatics training.</p>
+
+<h4>Genetics</h4>
+
+<p>Similar to molecular biology, genetics is a field that looks at the behavior of key genes and molecules across larger time scales. I think many computer scientists may enjoy this course, not only because it is so closely related to the sequencing technology as a whole, but also because of the remarkable similarities between the way cells and computers function. More specifically, DNA is persistant storage, RNA and proteins make up an aware and "thinking" temporal component of the cells "memory", and the proteins and metabolites of the cell actually form structures and machinery that carry out function for the cell itself to seek energy, to grow, to improve, and to adapt to the environment.</p>
+
+<h4>Biochemistry</h4>
+
+<p>This may be an optional course, and you may gain enough exposure to biochemistry through your molecular or cell biology course alone. However, biochemistry is not only how the cell makes decisions about food, growth, and metabolism, but also how we can use chemical principles of the biological molecules under investigation to design new methods on how to measure them. Without a good foundation in biochemistry, you may not appreciate the role of small molecules in medicine, nutrition, and even chemical safety if instead you only focus on the genes or proteins of the cell. Biochemistry is about the "lego" system that makes those proteins. It's about the "cheapness" and dynamic nature of small molecule influences inside the cell. It's about the energetics that drives and/or prohibits new medicines from binding to therapeutic targets. Advanced molecular dynamics and instrumental methods heavily rely on the physicochemical principles behind these simple building blocks in order to understand interactions of larger structures/complexes.</p>
+
+<h3>Mathematics and Statitics</h3>
+
+To the extent that bioinformatics is about biological data, it is certainly about mathematics applied to biology. While simulation and modeling remain techniques of theoretical "computational biologists", mathematics is equally useful in more applied roles involving exploratory or explanatory analyses of biological datasets. For this reason, bioinformatics is as much about mathematics as it is about comp-sci. Programming languages and algorithms come and go, but the quantitative reasoning behind a particuar model's success is very much futureproof.
+
+
+<img src="{{ base }}/assets/img/family_guy_algebra_what_the_hell_is_this.jpg"/>
+
+
+<h4>Calculus</h4>
+
+<p>I'm going to go out on a limb and say that while calculus makes an excellent mathematics course in general for any engineering student, it is not necessary for good understanding of most bioinformatics topics. The math may be useful for statistics and machine learning however, and for this reason is stays in the list. Vector calculus could be useful in some regards if you are implementing some types of optimization algorithms, but I wouldn't recommend this at the undergraduate level.</p>
+
+<h4>Linear algebra</h4>
+
+<p>Linear algebra is a far more useful topic. This leads naturally to an understanding of regression modeling, dimensionality reduction (PCA), linear independence, vector spaces, and other topics that may be useful when analyzing datasets or working with matrices of data. </p>
+
+<h4>Bio-statistics</h4>
+
+<p>Statistics is by far the best topic that requires the most attention for bioinformaticians. A solid understanding of statistical fundamentals will get you a long way in any of the scientific fundamentals listed above (biology and chemistry), but will also permit you to learn the two major data analysis languages in use in the field: R and Python. It is difficult to do some modeling tasks using base Excel, and this may be the only technical skill taught in freshman or sophomore level statistics courses. A course in biostatistics with a strong programming component like R leads to professional reports, intermediate modeling techniques, and a strong understanding of the role of normalization, model selection, and regularization that may be at play in machine learning courses.</p>
+
+<h4>Machine learning</h4>
+
+<p>Machine learning is a hot field at the intersection of statistics, mathematics, and computer science. Without a fundamental understanding of regression models and statistics however, you may struggle to keep up with the theoretical concepts included in most graduate-level machine learning courses. I put this in the mathematical category because the choice of a model to fit data boils down to mathematical and graphical choices, not comp-sci implementation details. Calculus and statistics are both pre-requisites. Many of the models used here on nice, tidy tabular datasets might not even be highly applicable, but the concepts of model training, regularization, and feature selection will benefit you regardless of how simple or how advanced of a model you need for a particular task.</p>
+
+<h3>Computer Science and Software Engineering</h3>
+
+<p>Remember that the field of bioinformatics is not just another field of computer science, although there are unique algorithms to bioinformatics and it heavily relies on coding. So what is the difference between computer science and software engineering in general? Computer science is much harder to define, as there are theoretical components and efficiencies associated with each bioinformatic algorithm. Software engineering however is not a lowly art form either.</p>
+
+<blockquote>If the goal of computer science is to make software worth using, then the goal of software engineering is to create usable and reliable software experiences that help advocate that lofty theoretical goal.</blockquote>
+
+
+<img src="{{ base }}/assets/img/computer_science_what_i_actually_do.jpg"/>
+
+<h4>CLI Fundamentals</h4>
+
+<p>I'd highly recommend the <a href="https://www.youtube.com/channel/UCuXy5tCgEninup9cGplbiFw">missing semester</a> channel on Youtube. It covers a variety of CS fundamentals with a Unix flavor. The 2020 course includes the following:</p>
+
+<ul>
+<li>Overview + the shell</li>
+<li>Shell tools and scripting</li>
+<li>Editors (vim)</li>
+<li>Data wrangling</li>
+<li>Command-line environment</li>
+<li>Version control (git)</li>
+<li>Debugging and profiling</li>
+<li>Metaprogramming</li>
+<li>Security and cryptography</li>
+</ul>
+
+<p>I'm also a huge fan of <a href="https://software-carpentry.org/">software carpentry</a> and I think they do a great job teaching the fundamentals of working on the shell to do basic tasks.</p>
+
+<h4>Intro to computer science</h4>
+
+<p>In my university, there was a "Computer science for engineers" class that taught Python and Matlab, and this was a perfect course on the fundamentals of programming. If-else, while/for/foreach, lists, dictionaries, and more. Other universities teach scheme or Java as their first programming course and I have to say that it was a pleasure to learn Python first. This should cover the fundamentals of programming and maybe some basic data structures and types.</p>
+
+<h4>Data structures</h4>
+
+<p>Any undergraduate course in data structures will unfortunately only be able to cover some basic topics: b-trees, hash-tables, balanced trees, red-black trees, since most undergraduates are still learning their first language or two, but this course is the foundation for any algorithms course. I don't have a data structures book that I can recommend, and I'm still looking for the right course to take for the first time to learn data structures from the ground up.</p>
+
+<h4>Algorithms and complexity analysis</h4>
+
+<p>I'm a big fan of Introduction to Algorithms by Cormen, Leiserson, Rivest, and Stein. I haven't read the whole book at this point but I think that the parts that I have learned from dynamic programming and complexity analysis have given me a better understanding of the types of canonical approaches used by most algorithms to solve problems. Coming from the biology side of things, I don't have a strong background in data structures or algorithms but I've found these two courses to be the most interesting CS material that I would still like to learn in a formal setting. </p>
+
+<h4>Web applications</h4>
+
+<p>Rather than taking a course in web application development, APIs, or modern javascript frameworks, I'd suggest an independent study to try and build your first web application, since web applications are almost ubiquitous now. Very few (internal) applications are built with traditional GUIs running native on someone's machine. Almost every application built for customers/clients in your own company will expect some type of web application for their needs. I used Ruby on Rails for my first application and loved the experience. Loved it. If I were to make a suggestion however, I'd say go with PostgreSQL, Python, Flask, and maybe a testing framework like behave/cucumber. </p>
+
+<h4>Database systems</h4>
+
+<p>My program at the University of Delaware did have a requirement to learn database systems and this introduced some of the n+1 problems and algorithmic optimizations possible with sophisticated database software. In addition to the normal forms and reduced redundancy that you gain from learning databases in a formal setting, it allows you to appreciate the optimizations behind the scenes that you get for free when you are utilizing a formal database in your application. The final project of the course was to build a full MVC web application which sort of tied into the previous experience I recommend for most biologists entering the field of bioinformatics: please learn at least one web development framework as its a common request or requirement for many mature companies that you want to be employed with.</p>
+
+
+
+<h2>First language</h2>
+
+<p>It seems like a lot of beginners or newcomers to the field get stuck right here. They learn the fundamentals of their first programming language and then stagnate. Well, since you've read this far, I'd like to say that you have to take it one step further beyond learning data structures and algorithm design (if you ever get there). You need to learn some advanced features of your language and actually build your first app or two for the command line.</p>
+
+<p>When I say advanced features, I actually mean libraries that may or may not be part of the standard library. Let's take Python for example. Do you know the ins and outs of <code>functools</code> and `itertools`? Could you make your own generator if you needed to? What if you had to wrap or monkey patch an existing class? Do you know how to do factorial with tail recursion? (What?? Python has tail recursion?) Do you know how to do it in the standard imperative style? Do you know the benchmarking tools to compare both? Do you use `profile` or iPython to profile your code? Do you know how to monitor for memory issues?</p>
+
+<p>There's always more to learn about the language. Google is able to get peak performance from Python code not because the code is the most efficient, but because the right library and the right implementation can turn into elegant Cython and turn into a fantastically performant library.</p>
+
+<p>I haven't even mentioned `numpy`, `scipy`, `biopython`, Scikit Learn, or `pandas`.</p>
+
+
+<h2>First app / CLI</h2>
+
+<p>I'd highly recommend any beginner to build their first application as a command-line utility. This requires some planning and familiarity with `argparse` in Python or the similar command-line utilities. It's been 5 years since I graduated with my M.S. in bioinformatics and I've only built 3-4 open-source command-line applications. In addition to a great `README.md` your code should have a few other goodies that will help you organize your code and increase maintainability of the codebase. These are detailed below.</p>
+
+<img src="/assets/img/the_two_states_of_every_programmer.png"/>
+
+<p>Of course, your first script (especially if you are a biologist coming into the computer science side of things) won't have all the bells and whistles of a mature algorithm or CLI tool. But that doesn't mean you shouldn't constantly strive to improve your software engineering fundamentals. An ugly, unmaintained codebase is likely a codebase that no-one will use. Or worse yet, when they use it, they could discover errors in your algorithm or its assumptions that make the code retractable from your article.</p>
+
+<p>You should strive to have a simple installation process, clear description of dependencies and how to install them, and anticipate the age-old meme of "it works on my computer." If you take your time and treat your code with respect, it will reflect positively on your maturity as a bioinformatician to your PI, your employers, and the users of your software. </p>
+
+<h3>README</h3>
+
+<p>At a bare minimum, your `README` should contain information about installing dependencies, and installing the CLI itself. This doesn't always have to be packaged in a formal package structure like a PyPI package, but it certainly will help with software distribution and installatin issues. I'd also recommend a section on the API if you've built that out as well, a usage section with details about the available command line arguments, and information about how developers should run tests, build documentation, or compile any artifacts.</p>
+
+<h3>Automated testing / continuous integration</h3>
+
+<p>Travis-CI is free for open source projects. There's almost no excuse not to have some automated unit-tests or acceptance tests attached with your project to demonstrate the maturity of your software and your attitudes towards its use by the potential audience. A nice introduction to configuring a Python project with Travis-CI can be found <a href="https://docs.travis-ci.com/user/languages/python/">here</a>.</p>
+
+<h3>Documentation</h3>
+
+<p>A Github wiki would do just fine here, as long as it is detailed and thorough about the software, its modules, and common errors or configuration mistakes. The more complicated your application and test data are, the more documentation that is required to properly show the user how it should be used.</p>
+
+<p>Ideally, you could use the ReadTheDocs service to build your Sphinx documentation straight out of your source code. This generates attractive and professional looking documentation including module structure, method/function argument type information, and short descriptions for each. </p>
+
+<h3>Test datasets</h3>
+
+<p>I like to include small test datasets in my git repository for users to run the command on. It works wonders for users to have example datasets included with a CLI so they can see what edge-cases have been anticipated and which haven't. This can help quite a bit if you are thorough with your examination of what inputs could break your parser or the algorithm itself, whether you've written the parser or not. Users will always find a way to throw something unexpected at your application and it helps immensely to have anticipated combinations of data and inputs that could trigger errors or exceptions in your application.</p>
+
+<h2>Finding a job</h2>
+
+<p>The last component I'll describe in brief is how to land a job as a bioinformatician. The key is not to overreach beyond your abilities and to be clear about what you do know at the intersection of two very technical and challenging fields. Are you an expert in RNA but the company only cares about DNA sequencing? Match as much as you can of the keywords, but keep your familiarity with nucleic acids at the forefront of your resume/CV.</p>
+
+<h3>Advertise your digital portfolio</h3>
+
+<p>Some will say that a Github portfolio alone won't get you the job, and they are mostly correct. However, there is a difference between a well maintained portfolio and a user account with a few poorly-documented scripts shoved into a few repositories. Mature software portfolios speak for themselves, and it would make sense to spend some time cleaning your existing scripts, removing the hardcoded global variables, making things nice with argparse, documenting the usage in a README, declare your dependencies and how to install them, etc.</p>
+
+<p>Your key projects should be "pinned" to the front of your Github profile. Your Github should be referrenced in your resume and key projects briefly described in a "Research" section in your resume, if you have the room. Key scripts for publications should be well documented and referenced in your publications section. Your Github profile should not remain largely inactive for years at a time, try to work on some simple maintenance throughout the year, if not just to update your script from Python 2.7 to Python 3.8, for example.</p>
+
+<p> An active portfolio is one that employers will take seriously.</p>
+
+<h3>Tailor your resume to each description's keywords</h3>
+
+<p>My final piece of advice about getting a job in the bioinformatics field is to build a word cloud (a type of word-frequency graph) from the job description. This will show you what keywords/buzzwords are used and with what frequency.</p>
+
+<p>If the job description talks a lot about MySQL, then make sure you use the word MySQL in your resume, even if you've only used PostgreSQL before. Take that advice with a grain of salt, I'm not asking you to lie or inflate your experience or technical skills, I'm asking you to make a judgement call about whether your resume should be thrown out because you wanted to be perfectly honest that you only have experience with Postgres in the past. Take this advice as you will. Most of the time, your resume will pass through automated filters and plenty of HR personnel before it reaches a technical recruiter or hiring manager who can understand the equivalence of *nix, Unix, and Linux experience.</p>
+
+<p>I wouldn't refer to too many specific algorithms that you are familiar with, I'd just list some key ones like BWA, samtools, BLAST etc. I think most positions are going to focus more on the types of webdev and programming experience that you have, so be sure to list those specifically that you have experience with.</p>
+
+<h2>Conclusion</h2>
+
+<p>So you want to become a bioinformatician? You've got a resume, a few undergraduate courses under your belt, maybe applying to graduate school or wondering if you can learn enough biology or CS to skip a lengthy MS or PhD? Or maybe you're in graduate school already and just want to be sure that you're on the right track to becoming a bioinformatician in the industry? Whatever your case may be, you can't go wrong with advanced CS/Bio courses, a *well-maintained* portfolio, no matter how small it may be, one or two publications, and a track record for good communication and follow through on your resume. </p>
