@@ -1,4 +1,320 @@
 # TODO list
+* New entry
+** Bioinformatics relies heavily on machine learning, but there are nearly an infinite number of features. Much like any scientific discipline, we are very often limited by our nomeclature. And my nomenclature is getting very odd right now.
+** However, there are many disciplines that have historically had superior quantitative methods. And histories of countries or origins of those methods of course, and I don't know any of them yet, I don't even know any great scientists in particular to name. Bioinformatics is both chemistry, electronics, software, hardware discipline, cost to manufacture, distribution, logistics, the whole nine yards. Yada yada Illumina blew me away. So am I in an antroductory class and I'm being highly inappropriate or something. And there are like really young kids there too. Okay 1 death required here. Uh this death involved someone trying to see how much faith in the system or faith in any one person stupid jump off a cliff type shit. No one ever does that. And a few scattered into their realm. The combinations of these two statements to provide the original ontology and therefore preserve the controlled nomenclature of the original encoding. 
+** the origin of future languages that describe the smoothness or firmness of features that will dominate the biomedical, biochemical engineering, and quantitative side of the discipline, i.e. the market factors that permit growth in these industries
+** for each nation as according to its financial ability and investments of effort to molding this language. For this reason, there is great need for the translation of these original ontologies into other languages such that the English and American empires do not dominate this field for the foreseeable future.
+** In this way, I am particularly worried about fundamentalist societies, neighborhoods, and even countries. If they believe that Western perspective on the advancements in the history of these languages as resulting from its early assumptions makes the West look foolish, it is only because religious intolerance of creationism as a simple but sweet property of the religious origin and expansion stories, are mislead in their assumption that opposition is purely impotent in its potential for commentary on humans and progress in biological and chemical fields as a whole. Though physics brings advancements in technology and potential for explorational media, the computer, the graphics card, the user experience and simplifications...
+** I say that the West uses language to initially describe what we perceive as 3 things that categorize what is considered "living" or "derived from life". First, the message. Then, the storage. Are they one and the same? Or is there a spatial and temporal component as well to their existence? But then what about the effect? The effect of the message is the machine, and though the machine is not the message, it is an interpretation and quantitative (i.e. predictive) dichotomy that results from the message. The message is something that is easy enough to abstract: its purpose.
+** The molecule or the message or the machine in this complex is defined as its purpose but also its vectors of modulation. Whether at the nanosecond scale (sometimes producing responses that can last from minutes to hours in cellular response rates, but not necessarily effect on the tissue...
+** These messages are regulated but have a static character as well. The static character of the molecule can often be categorized as functional (modulating building or communications by waves of flux). Or they can be static and structural. Structural features modulate responses and other organism features as well, but the structures are often seen in terms of chemical properties at this age of the maturity of the language used to describe their homogeneity, heterogeneity, fractionations/proportions, and the shapes of simplification of their dynamics.
+** The language is so basic in this field, it is younger than I expected, because I chose a field that has fewer empirical contributions from the perspective of modernity... This perspective is probably different from the practitioners, but definitely not from the theorists, who are limisted by their language and quantitation to describe what is valuable, confusing, or even just a little too focused of a subject area.
+** The work and field is tedious and long. The application spaces are near infinite, and you have to choose an organism, method, or technology to commit to mastering to be somewhat effective or credible in the field. And for this reason, the language obtained in deep study typically reflects the technological perspectives more than the application spaces. 
+** We need to work on more effective language for talking about what is possible or what is valuable or even a funny insight about the gift of knowledge in these areas.
+
+** Anyway, I was talking about a machine learning method. The feature space is genomic or transcriptomic in its nature, but it is a compact and spectral representation that is as dynamic as you have sample space. Sample space will be a dynamic topic in the field, driven by the cost in sequencing and the labor involved in preparing the libraries and samples for sequencing in different subject areas.
+** So if you invest in genomic knowledge, you would be largely exploring mutagenic space looking for the correct distance metric to isolate the signal from the null space of the spreadsheet. The null space quality is related to the sample space somehow, but is perfectly comprehensive summary as possible for this level of technological precision. 
+** The key is that it is a summary of genomic knowledge so biological replication of the profile helps clarify the null space as restricted by the complexity of the genomic space you are looking for increased numbers, but the numbers are misleading. An increase of just 1 and its corresponding loss from elsewhere in the genome is sufficient to identify point mutations and perhaps chromosomal rearrangements, but not at a resolution that would lend itself well to statistical methods and even clustering analysis initially without large numbers of conditional replicates.
+** The profile quality improves (with what relationship) with replication of the conditions being contrasted, as mentioned. But the real advantage is an individual contribution of mini profiles with respect to the individual genes and intergenic spaces. Distinguishing between those 
+
+
+** Think of experimental comparisons between profiles. These will be the application spaces possible to be explored for whole genome summaries or monitoring of inflection points during interventions at other levels, and thus can be thought of as genomic or transcriptomic summaries of small molecule or biological interventions. The summaries are snapshots, much like alignment. But because the whole profiles will be more convenient to store long term, as they are perfectly spectral, instead of linear with magnitudes of spatial features in the same way, they can be stored better long term for a particular resolution of profile quality. 
+** Describe spectral frequency k in terms of another instrumental parameter from other spectral methods.
+** Describe spatial characteristics possible through deconvolution with static genomes coordinates only.
+** Decribe spectral plurality in terms of another instrumental parameter from other spectral methods.
+** Combined we have a 2D space of frequencies and pluralities of each spatial feature, which would be too complicated to enumerate, and thus must simply be left to the investigator to specify.
+** Each gene has a kmer landscape. One axis is the k, one axis is the frequency, the other space is the sub-profile of the whole. How do these relate?
+** Each gene has a subspace shared with the whole profile. That subspace may change with the profile.
+
+** So this explains the key parametric considerations for any method that would result from such ruthless summarizations.
+** Let me go back to defining the original learning space.
+** The feature dimension is exponential in k
+** The feature space of a single sample is the flattening of the individual profiles into a single feature vector. Profile id * 4^k
+** The profiles space must be derived dynamically from the simplistic representation. First, a composite transcriptomic profile is obtained, then split during runtime into the feature profiles.
+** Then this 2D matrix is the snapshot of the genome of the organism providing both magnitude of measurement as well as spectral identity within the genome. This is an entirely new coordinate system that should be robust to genomic mutation.
+** The k-mer profile of the gene is different in magnitudes but similar in direction to the transcriptomic signal space.
+** I guess the only way you could derive the gene k-mer profiles from transcriptomic data would be to profile each read and add the read profiles after alignment.
+
+** There are metabolic, environmental, chemical, and even biological effectors that can elicit both rapid responses (i.e. temporal space) and even changes to homeostatic levels of the structural and functional machines described earlier.
+** So the major methods for effect would be dose response and time course studies of extracellular metabolite and precursor levels, extracellular ion charges, the presence of simple sugars and fats for deconstructive and reconstructive functions within the cell, the rearrangements within the cell that permit change in cellular state.
+** State is only linear in time, but is hyperdimensional in nearly every of the afformentioned effectors: metabolic, environmental, chemical. There are multiple states that can be occupied in each of those areas, and these describe the abstract concepts of homeostatic metabolic stability, but also of metabolic effect routes, and their profound signaling capacity for the cell, much like the information carrying capacity of truly biological effectors that more typically mediate intracellular responses.
+** So to study the cellular "thoughts" or simply, how the cells typically and atypically would respond to those effectors in both state change and the temporally mediated effects of the rearrangement of machination and also the signaling back to other layers of cellular information processing, namely the trancriptomic level.
+** The transcriptomic level is mediated by transcription factors that stochastically permit the response to provide a signal back to the genome to produce more message. But the stochastic nature should be of no mind at this point. The more important signaling category is the enhancer mediated signaling. 
+
+
+** K-mer profiles (spectra) are a complentary technique to alignment based abundances. The advantage is that single transcript profiles are more resilient to structural rearrangement, though that signal should still be there...
+** The other advantage is that transcript profiles also have resilience to single base pair mutations primarily mediated through the genomic mutational pathways, both natural and environmental.
+** The next advantage is that the profiles store spatial information about abundance implicitly as well.
+** Therefore this method adds the same capabilities as alignment, but allows that the read information be removed if necessary for storage reasons. A spectra is a set of numbers that better uniquely defines what a transcripts abundance and relationship to the genomic profile represents.
+** It is a better abstract representation of what the transcriptomic measurement is from a numerical perspective. Although SAM/BAM store the primary relationship of a read to a genomic location, you must add different file layers to describe mutations. The VCF is a cross section of the mutational space with dimensions dictated by the number of the set of mutational analyses performed at the run time.
+** However, if you don't want to do that analysis, you can still store the relevant raw data in a spectra.
+
+** So if there is a metabolic or machine effect at the transcriptomic level, all metadata necessary for future analysis can also be stored inside the transcriptomic spectra, again capable of immense resolutions determined at runtime in 4^k for the composite profile. Again, the transcriptomic profile is the most concise single picture of the transcriptomic state. And lends itself to already developed spectral matching methods in theory.
+** So if you really wanted to look at transcriptomic correlation, you would look at a resolution capable of nearing the natural detection limit imposed by our limit of knowledge of transcriptomic flux effectors. At this point in 2020, we are limited to epigenetics, antisense, and regulatory pathways. In cancer we are seeing some resolution of the regulatory pathways, but the knowledgbase is amidettedly a mixture of private and public knowledgebases.
+** For example, if you want to understand the methods for curing a particular pathway' dysregulation, the supporting information is all buried within the FDA reports, all the supporting information that is generated through hypothesis driven research, it's all there. The problem solving strategies used. But the conversation the public typically sees is related to information gathering capabilities at the market side.
+** So investors struggle to put historical context around a particular technological advance in a biological nature. They are used to talking about the capabilties of data and physical productivity, but the size of producitivity is misleading to the public and their environmentally driven perspectives developed about the state of medicine and its intent.
+** For example, the orphan disease were a large priority for the pharma industry, but provided greater certainty for experimental medicine support because the cases were considered so rare and perhaps sacred.
+** The issue is that the orphan diseases have large impact on very few, while larger plagues to society receive better translation of the science to those who would invest the time developing their vocabularies to even read about the state of the diseases, let alone write about the state of the diseases.
+** And when so much information is buried by time, we typically only have a few major disease areas to study and these advances largely evade the textbooks for want to communicate the power of the science, theoretical, technological, and ethical perspectives on where and how the tech should be used.
+** The public expects a lot from agricultural techniques and food science, and though these guide most people's perspective on personal health and hygeine, there is considerable want for translation of the medical side of things back into laymans terms.
+** In this way, additional vocabularies need to be built to guide a discussion of health and hygeine, medical progresses, environmental effectors, pollutants, greenhouse rates, and even more significantly what technologies will cost to provide necessary resolutions and response times to the public for certain special sectors of society and government. The companies certainly address problems, but you cant count on financial investment in the traditional sense for certain projects that cannot be translated into common terms for the public to understand the significance of.
+
+** If you can identify species in metagenomic techniques with k-mer profiles or more traditional OTU based analysis, then why can't you do this with mixed transcriptomic populations showing different cellular abundances?
+** Anyways, the storage of k is the technologically limiting factor for profiles, as this is proportional to both limits to abundance resolution and also to the genomic or transcriptomic resolution of the profile, or put another way, the ability to distinguish regions in the genome or transcriptome. 
+** You can imagine that the union of the genomic and transcriptomic profile would have information about the current limits of technological resolution of phenomenon affecting the genomic and transcriptomic levels of storage, message, and of course environmentally or intrinsically regulated processes.
+** But before imagining what is possible with the genomic and transcriptomic union profile, for a moment, we should return to the topic of k-mer storage. Storing multiple values of k providees little tangible benefit for the future of the technology, because we aren't yet in a state where our RAM permits us to store multiple profiles in memory yet at the consumer hardware level. So individuals are limited in what the can conceivably see with this technology at the resolution given to use by the limits of current storage reading technologies like SATA, PCI-E, and that's about it because we don't typically work with external drive transfers execpt during field work.
+** Anyways, storing multiple values of k could provide insight into mutational or regulatory forces effecting specific k-mers. Those could be k-mers from differential transcriptional start sites, or antisense mediated transcriptional cleavage effect cascades. To the limit of my knowledge, there isn't any literature that yet says that a transcript cleavage has a necessary cascade aside from its own dynamics, instead the literature focuses on what is generating those cleavage events, what is upstream. I suppose in principle, there could even be secondary cleavages from the degradation products that may target other genes either nonspecifically, or otherwise.
+** If there was secondary cleavage events, it would allow an antisense pathway (yes like microRNAs) to mediate a more complex response than having a highly conserved target motif be present on the primary targets and secondary targets. The target transcript could have anticorrelated secondary transcriptomic linkages with genes that may or may not share other transcriptomic regulatory features, like coexpression patterns. Coexpression is both temporal through the cell cycle, as well as response mediated. 
+** If you wanted to investigate the temporal side of the cell, then you'd need further sequencing refinements like FACS mediated expression enrichment over the populations heterogeneity. Of course single cell would give you a better sense of the stochastic nature, but it provides a burden on the methods implications, since an effective sample size to produce "average" behavior would need to be in the hundreds or thousands to provide a more meaningful description of heterogeneity of expression, decision, and influence within a clonal population. Well... not clonal, but at least a subset of cell types within the total that share similar charactristic markers. You know what I mean.
+** Or if you wanted to investigate the temporal dynamics of regulatory mediated effects, you'd need to understand entire pathways and regulatory timescales to properly model the static and dynamic character of those pathways. In this case, once again, recall that response includes proteomic, trancriptomic, and metabolic signaling responses. When I say metabolic I usually refer to internal homeostatic metabolic response networks between tissues and within tissues between cells. But this could also mean environmental stimuli both in a concrete sense (toxicology) and in the abstract sense (hormonal, neurotransmitter, and even social environment stimuli that could be small molecule chemicals.
+** The static character is probably a primary target for biomedical research, as it will provide insights about disease pathology and the timing for interventions, but also the static character over time and between population states must also be a dynamic configuration. In certain cases, we are aware of single receptors that display amazing affinities and we typically describe these as static affinities. Even though allostery for example suggest that these affinities can indeed be dynamic and statelike, if not completely in flux.
+** But anyways the static character of the pathway response give us a key sense of intersection between genes and transcript purpose within the cell. The more definition we can derive from these pathways, the more we'll know what side effects could be possibly mediated directly by our interventions.
+** The true goal of analyzing an entire pathways response biochemistries and molecular signaling events may be to differentiate between selective, simpler responses and more unpredictable cascades with multiple resulting downstream modulations of both the primary target pathway and the secondary pathways within the same cell population and even in other cells, tissues, or environments.
+
+** The dynamic character of a pathway would be a primary target for academics. To make examples of experimental designs that can unravel the complexities of experimental comparisons, each of which must be done between time points, cellular subpopulations, or response mediated states.
+
+
+** Within a whole pathway, there may be multiple targets to produce a selective response from the pathway instead of a complex cascade
+
+* Hypothetical web service design
+** EC2 container
+** Creates a downloadable .kdb file
+** Web documentation structure
+*** Installation
+*** Getting Started
+**** Paginated for sequential readers
+**** Tab menubar (you know, links to #divs)
+**** Menu (each page has its own usage section
+***** Building K-mer profiles
+****** [#A]Constructing a k-mer profile from a single file
+******* --------------------------------------------------------------------------------------------------------------------
+******* Note: what if we could construct multiple k-mer profiles simultaneously? Like, select ranges something like a positional argument
+******* kdb profile ... <start1:end1> <start2:end2>
+******* We don't yet have support for multiple spectra, even inside a multiplexed profile.
+******* Remember that the multiplexing is how we're supposed to find addition errors in profile total counts
+******* But it's also how we're supposed to create simulated microbiomes
+******* --------------------------------------------------------------------------------------------------------------------
+******* CLI Usage
+******** Usage statement 
+******** Files
+******** positional arguments
+******** options
+******** Verbosity
+******* Related API vignettes
+******** Explain relevant functions
+******** Eventually this needs to be fit into the inside of a web service a a job layer for the lazy people who don't want to install the frigging CLI.
+******* Related documentation
+******** Organized by relevant module
+******* Biostars
+******* Submit question (contact _include)
+******* Github Issues
+******* Gitter
+
+****** Multiplexing files into a single k-mer profile
+****** [#B] Deconvolving a composite k-mer profile from the singleton profiles, which could be normalized in any custom way, and approximating the compositions from the composite profile
+******* Note: not implemented
+***** Calculating k-mer distance matrices
+****** Note: Can be between arbitrary numbers of kdb files, so long as they all have the same value of k
+***** Comparing single files
+****** Simple metric format (YAML)
+***** Comparing multiple files
+****** Custom output formats: plaintext with blocks of yaml, csvs
+***** Reading and writing files (.open)
+***** Iterating over files (.readline)
+***** Reading in blocks (  .readlines(block start)   | index )
+***** Reading exact lines (index)
+***** Creating a normalization method
+**** Refactor 2 (single file validation) (kdb/kdb)
+***** TODO Metadata validator
+****** YAML, but first element should be kdb version, second element should be end of metadata block.
+****** Next, store metadata block and continue reading blocks until that many bytes has been read i.e. the end of the metadata blocks is reached
+****** Compare the read metadata to the metadata major version (metadata.json), as configured by os.environ, default is the major version hard-coded in what is read by the version number.
+****** If the next line from the file is not a k-mer record, (implying its still reading the metadata block is off):
+******     raise ErrorCorruptedFile("bgzf .kdb file '{0}' has a misaligned data block start point.".format(self.name))
+***** TODO Data block validator
+****** Data block validator begins when the entire metadata block(s) are read.
+****** Data block validator iterates over the file once, checking th validity of the k-mer record structure.
+******* This merely implies that the main file is a 2-column file, and if the third open-ended metadata is present, then it can be a json structure conforming to a certain version number of the file-spec.
+******* So major versions of the json schema for the k-mer record structure will be needed to be stored in a redundant array inside of a config.json or something similar.
+******* metadata.json
+******* record.json # Each contains major version string keyed hashes of json-schema
+
+
+****** At the end, calculates the equality of the number of lines of the file == 4**k
+****** TODO Validate single file
+******* TODO IMPORTANT | .validate k equality, Validate number of lines in each file = 4**k, validate index if present, don't support unindexed reads
+******* TODO 
+****** Single file read method
+******* TODO IMPORTANT | .read should check to see if number is outside of the specified bit range, even if the file metadata's version says otherwise.
+****** Single file write method
+******* TODO | .write is not yet implemented
+****** kdb module housekeeping
+******* TODO IMPORTANT | .attributes come from dictionary versions and therefore schema versions vs _something() methods and .something() methods
+******* TODO IMPORTANT | Need a file metadata schema validator
+******* TODO IMPORTANT | Need a k-mer metadata schema validator
+******* 
+***** TODO iPython cost of metadata validation, data block validation, whole file validation, whole file validation and then reading
+***** If necessary, plan out the cost of implementing a parallelized or threaded reading process (we'll probably never use the threaded version)
+***** But if we built the threaded version, we could implement concurrent access to the database which would improve memory utilization rates. 
+***** Alternatively, if the cost of these validations is reasonable (minutes not hours, hopefully subminute validations), then the existing single process procedural design is sufficient
+***** And we could simply improve validation speed costs in multiplexed operations like those that would involve the comparator module,
+***** and those validations can be done once at the beginning and then the index is simply used.
+**** Refactor 3
+***** TODO Comparator
+****** TODO File validators as single threaded, multithreaded, or parallel processes
+****** We need to find the memory boundary of the file validator and make sure that it is low. Since only some YAML is stored, I expect kb to 50-100 Mb of data per file during metadata validation, then I expect the streaming rate of the data block to be consistently under 50Mb of single record metadata.
+****** Because we shouldn't need a read_block method for the time being, since we're just calculating meta-statistics
+****** Wait we already have a next() method... how would that relate to reading the file in parallel vs reading the file with threads?
+****** This might be hidden or optional documentation, perhaps ony shown in Sphinx.
+****** TODO Single - many operations (deconvolver)
+******* Separate the primary positional argument (the multiplexed file) from the trailing <singles...> positional array.
+******* What is the mathematical operation to determine if 2 vectors are linearly independent? What about the single profile matrix's determinant? What about their eigenvalues and eigenvectors?
+******* PCA
+******* SVD
+******* Clustering operations
+******* Compositional identities
+******** Single profile is adequately represented by parent profile
+******** Single profile is in approximate tolerance to determine the 1D compositional fraction that the single profile represents?
+******** Single profile is outside approximate tolerance. What is the math behind this comparison?
+******** If this was a correlation distance percent similarity, should it be Pearson or Spearman? Could their be options for both?
+******** Then if the multiplexed profile is sufficiently correlated to any single profile, then we could identify their relationship as major. 
+******** If the parent profile was linearly dependent on the single profile, then would a simple correlation and the number of unique k-mers, nullomers, and the number of total k-mers sufficient to describe the degree of confidence in the correlation?
+******** Profile relationship is intrinsically qualified by the available normalization methods, distance metrics, version of software, version of profiles, and composition of profiles.
+******** Single profiles together (the matrix) are solutions to the matrix equation Ax=B Where A is a n x M where M = 4**k, x are the compositional fractions of the n samples, and B is the composite profile.
+******* Angle (theta)
+******** The angle (theta) is related to the correlation coefficient by the following.
+******** The cosine similarity equals the uncentered correlation coefficient.
+******** Note that the data must be centered
+******** cos (theta) = x.y/||x|| ||y||
+******** One aim of knowing the correlation coefficient (rho) is to test the null hypothesis that the correlation is zero.
+******** The other aim is to derive the confidence interval that when sampled produces the probability of observing rho with some probability p.
+******** Is that also equal to the Markov probability of each sequence? 
+******* Correlation continued
+******** Rho(X,Y) = cov(X,Y) / sigmaX*sigmaY
+******** Also recall that 
+******** Rho(X,Y) = E [ (X - ux) * (Y - uy) ]
+********* Okay so ux is the arithmetic mean of X, uy is the arithmetic mean of Y
+********* sigmai is the summed standard deviation of i
+********* X - ux I refer to as the centering.
+********* So to sum the expected values of the product of each of X - ux (the difference of xi with respect to X - ux) and each of Y - ux (the differences of yi with respect to Y - uy)
+********* We need to have access to both the differences, the absolute means (ux, uy), and the absolute standard deviations.
+******** 
+
+****** TODO Single - single operations ( metadata comparions possible )
+******* Please enumerate/ellaborate (this would be artifacts of how they are compared, all operations should arbitrary numbers of files by default)
+****** TODO Output data schema writer
+******* Continuous schema for distance matrix output
+******** Contains support for floating point numbers specifically using json-schema
+***** Reading single files
+****** TODO Api documentation only
+******* Calculating the block data start site
+******* Reading and skipping the metadata block
+****** TODO VERY LOW PRIORITY | Command-line view uncompressed
+****** Accessing file metadata
+******* kdb summarize 
+******* accessing metadata schema (metadata.json) vs validating metadata (jsonschema) vs accessing individual attributes written into the kdb object
+****** Accesing k-mer metadata
+******* accessing metadata schema (record.json) vs validating record metadata (jsonschema) vs get/set of kmer metadata attributes
+****** using next() to retrieve the next line with .readline
+******* Using .read to bascially find the data block start (if available and if not, from the file), and then just .readline
+******* Using .readlines to basically read blocks at a time
+***** Writing single files
+****** format conversions
+******* to/from SQLite databases
+******* to/from SQL database dumps (postgres, oracle, mysql/maria)
+******* to/from connected sqlalchemy schemas
+******* to/from .kdb files
+****** writing metadata involves writing the whole file OR just to the metadata columns / config in a database representation
+******* Write the metadata to the file, then read from the SQLite database store into the rest of the file, starting with that block.
+****** Writing data to the file involves reading from a CSV backup, a SQLite backup, a SQLalchemy database connection, and/or a backup file.
+****** Not really concerned with benchmarking write speed at all.
+***** 
+
+*** How to ask for help
+**** Literal link to the issues page
+***** Make this a notecard on the website. Minimize the language and instead ask for help.
+***** Disclaimer: we would prefer discussion about basic usage questions and minor issues relating to uncaught errors be first described on StackOverflow and then eventually crosslinked onto a Github issue
+***** But we would also like for conversation about the application space be left to someplace like stackexchange, biostars, or preferably github issues with the help of the community.
+***** We provide the link to the issues page as a suggestions to users who may have found original bugs or would like to propose certain other features.
+***** At this point I cannot guarantee citation for anyone who does not contribute in a significant way, but according to the history, 
+**** Literal link to biostars or stackoverflow
+***** Provide traffic to places that deserve it.
+**** Ask for help here
+***** Submit question page, provide disqus
+*** Definitions
+**** K-mer
+***** Each k-mer is a spatial product at a certain frequency that was originated from that organism to fill a particular puzzle piece in its genome. Could have functional significance or otherwise. Could have observable resonance frequencies?
+***** Each k-mer subgraph must have similar features that describe the decision tree to a graph collapse.
+***** Each subsequence is the product of a Markov chain that lead to the observation (the subsequence) but also, each subsequence shares similarity with that ideal walk,
+***** And this identity is expressed as a probability in a single dimension.
+***** There is an infinite probability space inside a given model.
+***** More strictly however, a k-mer is just a subsequence inside of a sequenced space or a sequencing experimental lifespan or a time period of technical dominance.
+***** Using any individual k-mer for any particular purpose of measurement or space exploration requires explicit assumptions.
+***** I assume that k-mer frequencies are mostly static in their entirety. And deviations from that would have to be explainable in some way, most likely a probability or correlation similarity
+***** I also assume that distances are not static and may shrink or expand or otherwise flow in a way that contextualizes the measurement or classification being done.
+***** In this case we are using a single distance to arrive at some possible type of speciation conclusion.
+***** The first definition of speciation I remembered was that eukaryotes evolve very slowly and prokaryotes evolve very quickly. So much so that similarities between areas of the phylogenetic tree could have actual sequence similarities far below 5%,
+***** To me it is obvious that it is possible for strains to bear much lower similarity, but for the most part it was considered remarkable if sequence alignment between species of bacteria was as high as 70% similarity by a conventional, linear, blast based method.
+***** This is an untested hypothesis in my life concerning bacteria and I've never been able to test it much until now. I have created an alternate similarity metric between profiles of k-mers that bears very much influence and philosophical similarity to the distances that were in fact created by my predecessors like kPAL, jellyfish, and even khmer. 
+***** My similarity metric is the unit vector of that particular subspace in 4^k-dimension. The unit vector should be fairly static with respect to the experiment, the nature of the strain, and even the true genomic identities of that organism, which made occupy some subspace of the 4**k space.
+***** My similarity metric is the correlation distance between the unit vectors. If I were smart, I'd add additional dimensions available to the distance method.
+***** The other possibility I explored was a normality that was represented close in Euclidean space to the unit vector correlation method... and it might have been based on counts.
+***** In fact it might have required me to first obtain the median and arithmetic average of the particular k-mer distribution, compare these with the coefficient of variation, watch the sigma scale,
+***** And see if that had many different variations, but again I haven't collected enough variation for the experimental questions I'd like to make obvious.
+***** If I created the distributions of the Clostridia species, I'd have some type of average profile of the Clostridia based on a certain subcompositional percentage and since I'm in fasta space, that just means 1-to-1.
+***** If I was in fastq space I'd have to actually sort out the percentages of the subspecies. So what we're really asking here is what would a uniform distribution look like in terms of the k-mer profile space for lets say 3-8 clostridia, maybe one bacillus strain, and maybe E. coli for good measure.
+***** And if the fastq's perfectly represented it, then it would look like just some form of the scaling factors involved in permuting the uniform distribution of an idealized fasta space vs the idealized fastq space.
+***** Yes you can imagine doing fasta - fasta, fasta - fastq, fastq - fastq, and fastq - fasta queries of the profile space.
+****** Fasta sequences are idealized. They are single snapshots of a strain that are incredibly temporal.
+****** We do not assume that point mutations are even permanent or even temporarily permanent mutations, because we don't have the temporal resolution to ellaborate in such a way. However,
+****** We also do not assume that indel mutations are even as such and of course because of the particular style and sensitivity levels beyond the scope of 100 bases for example (when considering read lengths of 150 and a pair of them)
+****** Observed indels have other observables, like context in the fastq set and in the fasta set, and propensity for misalignment or misreading by the alignment platform, in the abstract sense.
+****** As such even within a lab it isn't always necessary to explore just the temporal notion of these features we refer to as genes within the genome or even allelles with in the annotation.
+****** There is much to be learned even by just exploring the dataset as it appears. One thing I would like to challenge is that alignment is even necessary to contextualize a sequencing dataset. We cannot necessarily say much of the "completeness" of the observation, in a genomic fasta sense.
+****** It refers to a location of total sequence and subsequence space that already has enough necessary context, and little metadata is required to permute what is observed. # I don't like this because this is the part where my idea becomes too endless : because there may be higher dimensional states of the completeness of any particular profile
+****** The concept of profiles is powerful enough as it is to identify the subsequence space the subsequence graphs that may result from a particular assembly process and a particularly observed stability in the long-term snapshot of a fasta file.
+****** If we specify a system such that version numbers change, then we also specify one where results are not entirely reproducible. So in order to combat this, there are sequence annotation services.
+****** Anyway so the profile annotations in this way are specified in the metadata, and it is possible to support an application that, to the extent that it can, autodetect its own internalized json-schema representations version, and may be possibly futureproofable.
+****** So the annotations worth providing at the moment are only so far total count, unique count, and not average count or std dev (see, that's a normality term. Continuous distributions)
+****** We need to figure this out in terms of annotations that make sense for the discrete nature of the markov chain, since even though we are working a lot with correlations and probabilities in the model generation sense, they are not present much in the sequence generation space, which we have not dimensionalized.
+****** If I could recall, how do I undimensionalize a number? How do I make this unitless? 
+**** distance
+***** a distance in this case is what you would expect it to mean, but in this case its a low dimenional representation of possible combinations of distances 
+***** that are relevant statistics (the search is not over yet) for describing the spaces (4**k)
+***** the real danger here is that the entire dataset does not fit into memory for certain choices of k, and thus it isn't exactly easy to play with the profiles in numpy
+***** This is why we need a slurp method for the kdb to just yank it into a numpy array on the right machine.
+**** distance matrix
+***** 
+**** k-mer profile
+**** k-mer profile histogram
+**** distribution
+**** gene
+**** organism
+**** genome
+*** Analyses
+*** Links back to the Getting Started page
+
+
+** About
+*** Long form of where the idea came from, include links to the acknowledgements page and bibliography where appropriate.
+** Acknowledgements page
+*** kPAL
+*** Jellyfish
+*** khmer
+*** Other major academic simulated microbiome studies of worth
+*** Yes at this point I literally have not seen the way that original projects lead directly to algorithm design. Instead I'm just creating my own prototypes.
+
+
+**** Biostars or Stackoverflow (reminder to subscribe to the kdb tag if one is possible to create)
+
+**** 
+*** How to explore each command's usage (menu of individual documentation for a single command
+*** 
+
+
+** With page on how to navigate READMEs without a hyperlink table
+*** And include that at the bottom of a Getting Started page
+*** 
 
 
 * Home (index.html vs index.md)
